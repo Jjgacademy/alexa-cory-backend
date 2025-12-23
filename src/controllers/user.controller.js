@@ -4,7 +4,9 @@ import crypto from "crypto";
 import nodemailer from "nodemailer";
 
 /**
- * GET /api/users/profile
+ * =========================
+ * PERFIL
+ * =========================
  */
 export const getProfile = async (req, res) => {
   try {
@@ -16,31 +18,35 @@ export const getProfile = async (req, res) => {
     );
 
     res.json({ ok: true, user: result.rows[0] });
-  } catch (error) {
+  } catch {
     res.status(500).json({ ok: false, message: "Error del servidor" });
   }
 };
 
-/**
- * PUT /api/users/profile
- */
 export const updateProfile = async (req, res) => {
   try {
     const userId = req.user.id;
     const { name, password } = req.body;
 
     if (!name) {
-      return res.status(400).json({ ok: false, message: "El nombre es obligatorio" });
+      return res
+        .status(400)
+        .json({ ok: false, message: "El nombre es obligatorio" });
     }
 
+    // Solo actualizar nombre
     if (!password) {
       const result = await pool.query(
-        `UPDATE users SET name = $1 WHERE id = $2 RETURNING id, name, email`,
+        `UPDATE users
+         SET name = $1
+         WHERE id = $2
+         RETURNING id, name, email`,
         [name, userId]
       );
       return res.json({ ok: true, user: result.rows[0] });
     }
 
+    // Actualizar nombre + contraseña
     if (password.length < 6) {
       return res.status(400).json({
         ok: false,
@@ -51,19 +57,24 @@ export const updateProfile = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const result = await pool.query(
-      `UPDATE users SET name = $1, password = $2 WHERE id = $3 RETURNING id, name, email`,
+      `UPDATE users
+       SET name = $1,
+           password = $2
+       WHERE id = $3
+       RETURNING id, name, email`,
       [name, hashedPassword, userId]
     );
 
     res.json({ ok: true, user: result.rows[0] });
-  } catch (error) {
+  } catch {
     res.status(500).json({ ok: false, message: "Error del servidor" });
   }
 };
 
 /**
- * POST /api/users/recover-password (POR CORREO)
- * NO SE TOCA
+ * =========================
+ * RECUPERACIÓN POR CORREO (NO SE TOCA)
+ * =========================
  */
 export const recoverPassword = async (req, res) => {
   try {
@@ -86,7 +97,10 @@ export const recoverPassword = async (req, res) => {
     const expires = new Date(Date.now() + 15 * 60 * 1000);
 
     await pool.query(
-      `UPDATE users SET reset_token = $1, reset_token_expires = $2 WHERE id = $3`,
+      `UPDATE users
+       SET reset_token = $1,
+           reset_token_expires = $2
+       WHERE id = $3`,
       [token, expires, userId]
     );
 
@@ -108,14 +122,11 @@ export const recoverPassword = async (req, res) => {
     });
 
     res.json({ ok: true, message: "Correo enviado" });
-  } catch (error) {
+  } catch {
     res.status(500).json({ ok: false, message: "Error del servidor" });
   }
 };
 
-/**
- * POST /api/users/reset-password/:token
- */
 export const resetPassword = async (req, res) => {
   try {
     const { token } = req.params;
@@ -129,7 +140,9 @@ export const resetPassword = async (req, res) => {
     }
 
     const result = await pool.query(
-      `SELECT id FROM users WHERE reset_token = $1 AND reset_token_expires > NOW()`,
+      `SELECT id FROM users
+       WHERE reset_token = $1
+       AND reset_token_expires > NOW()`,
       [token]
     );
 
@@ -152,17 +165,26 @@ export const resetPassword = async (req, res) => {
     );
 
     res.json({ ok: true, message: "Contraseña actualizada" });
-  } catch (error) {
+  } catch {
     res.status(500).json({ ok: false, message: "Error del servidor" });
   }
 };
 
 /**
- * POST /api/users/recover-by-username
+ * =========================
+ * RECUPERACIÓN POR USUARIO (DEV)
+ * 👉 AQUÍ ESTABA EL ERROR
+ * =========================
  */
 export const recoverByUsername = async (req, res) => {
   try {
     const { username } = req.body;
+
+    if (!username) {
+      return res
+        .status(400)
+        .json({ ok: false, message: "El usuario es obligatorio" });
+    }
 
     const result = await pool.query(
       "SELECT id FROM users WHERE name = $1",
@@ -170,7 +192,9 @@ export const recoverByUsername = async (req, res) => {
     );
 
     if (result.rows.length === 0) {
-      return res.status(404).json({ ok: false, message: "Usuario no encontrado" });
+      return res
+        .status(404)
+        .json({ ok: false, message: "Usuario no encontrado" });
     }
 
     const code = Math.floor(100000 + Math.random() * 900000).toString();
@@ -186,14 +210,21 @@ export const recoverByUsername = async (req, res) => {
 
     console.log("🔐 Código recuperación:", code);
 
-    res.json({ ok: true, message: "Código generado" });
-  } catch (error) {
+    // ✅ CLAVE: SE ENVÍA EL CÓDIGO
+    res.json({
+      ok: true,
+      message: "Código generado",
+      code: code,
+    });
+  } catch {
     res.status(500).json({ ok: false, message: "Error del servidor" });
   }
 };
 
 /**
- * POST /api/users/reset-by-username
+ * =========================
+ * RESET POR USUARIO
+ * =========================
  */
 export const resetByUsername = async (req, res) => {
   try {
@@ -232,8 +263,11 @@ export const resetByUsername = async (req, res) => {
       [hashedPassword, result.rows[0].id]
     );
 
-    res.json({ ok: true, message: "Contraseña actualizada correctamente" });
-  } catch (error) {
+    res.json({
+      ok: true,
+      message: "Contraseña actualizada correctamente",
+    });
+  } catch {
     res.status(500).json({ ok: false, message: "Error del servidor" });
   }
 };
