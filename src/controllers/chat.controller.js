@@ -1,8 +1,13 @@
 import OpenAI from "openai";
 
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+let client = null;
+
+// Solo crear el cliente si existe la API KEY
+if (process.env.OPENAI_API_KEY) {
+  client = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
+}
 
 export const chatTributario = async (req, res) => {
   try {
@@ -11,6 +16,14 @@ export const chatTributario = async (req, res) => {
     if (!message) {
       return res.status(400).json({
         reply: "El mensaje es obligatorio",
+      });
+    }
+
+    // 👉 OpenAI desactivado (PC sin API KEY)
+    if (!client) {
+      return res.json({
+        reply:
+          "El servicio de inteligencia artificial no está habilitado en este entorno.",
       });
     }
 
