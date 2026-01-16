@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>0201202301179240789300120050010000677941234567813</numeroAutorizacion>
+<fechaAutorizacion>2023-01-08T13:33:39-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.1.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>WAX AND TAN CENTROS DE DEPILACION Y BRONCEADO SA</razonSocial><nombreComercial>WAX AND TAN CENTROS DE DEPILACION Y BRONCEADO SA</nombreComercial><ruc>1792407893001</ruc><claveAcceso>0201202301179240789300120050010000677941234567813</claveAcceso><codDoc>01</codDoc><estab>005</estab><ptoEmi>001</ptoEmi><secuencial>000067794</secuencial><dirMatriz>Avda Interoceanica, Junto al Hospital de los Valles. CC ESKA</dirMatriz><agenteRetencion>1</agenteRetencion></infoTributaria>
+  <infoFactura>
+    <fechaEmision>02/01/2023</fechaEmision>
+    <dirEstablecimiento>Avda Interoceanica, Junto al Hospital de los Valles. CC ESKA</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>OSCAR DIAZ.</razonSocialComprador>
+    <identificacionComprador>1718437138001</identificacionComprador>
+    <direccionComprador>SAN RAFAEL</direccionComprador>
+    <totalSinImpuestos>59.81</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <baseImponible>59.81</baseImponible>
+        <tarifa>12.00</tarifa>
+        <valor>7.18</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>66.99</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>66.99</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>4.03.01.03.11</codigoPrincipal>
+      <descripcion>Pack deck polish y scrub 50 ml en combo</descripcion>
+      <cantidad>1.00</cantidad>
+      <precioUnitario>31.25</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>31.25</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>31.25</baseImponible>
+          <valor>3.75</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>4.01.01.01.02</codigoPrincipal>
+      <descripcion>Dep Corp Fem Pierna Completa</descripcion>
+      <cantidad>1.00</cantidad>
+      <precioUnitario>14.28</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>14.28</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>14.28</baseImponible>
+          <valor>1.71</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>4.01.01.01.08</codigoPrincipal>
+      <descripcion>Dep Corp Fem Bikini brasilero Comb</descripcion>
+      <cantidad>1.00</cantidad>
+      <precioUnitario>7.14</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>7.14</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>7.14</baseImponible>
+          <valor>0.86</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>4.01.01.01.10</codigoPrincipal>
+      <descripcion>Dep Corp Fem Atras Comb</descripcion>
+      <cantidad>1.00</cantidad>
+      <precioUnitario>3.57</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>3.57</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>3.57</baseImponible>
+          <valor>0.43</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>4.01.01.01.12</codigoPrincipal>
+      <descripcion>Dep Corp Fem Axilas Comb</descripcion>
+      <cantidad>1.00</cantidad>
+      <precioUnitario>3.57</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>3.57</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>3.57</baseImponible>
+          <valor>0.43</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional><campoAdicional nombre="AGENTE DE RETENCIÓN">Resolución No. 1</campoAdicional></infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature103022">
+<ds:SignedInfo Id="Signature-SignedInfo80042">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID574174" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature103022-SignedProperties623230">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>E5NIPbOlGTSpkMR7/T4Mf62YwUI=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1272732">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>xwxtL8jYBgpBMn+hN42puPZKc54=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-254452" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>4wIgIyHz1kNVDvJfrhCTJbAwUlk=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue540615">
+Kh7NEEkL1WVH7+Jpwgkg8WfFsYkjWGUgolG0GfRMoeKfuuNkrdDio/YGMlO7W+bF01uy8aRxmm1Y
+10ByA9tnCklmuCRLyV7me/FZbOKFs0g0Ay0H66P2I5QvyEF8/zCNF3xAwslqmuwmb7sgKMveaJ8V
+6HrzvG224FM3vMsNyOowIc7gvMO3k+nA80WatP22pVnVgQ3Mdw1hCwSAoSf6dJCU/UknyzOZqizx
+xXR14SF/oOUv24QOuX4xjlN/ixjoLu6+QAtlbI90R6emxz7fTidPeDRiSIOAS/fR8HAbjazRdnZa
+aKK4Hhff71PPH5wFeeDvcK19funjIekxBjrb+A==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1272732">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIMLTCCChWgAwIBAgIERY6IpjANBgkqhkiG9w0BAQsFADCBmTELMAkGA1UEBhMCRUMxHTAbBgNV
+BAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAyMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJ
+T04gREUgSU5GT1JNQUNJT04xOTA3BgNVBAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNV
+QkNBLTIgU0VDVVJJVFkgREFUQTAeFw0yMjAzMDgxMzI2NTBaFw0yNDAzMDcxMzI2NTBaMIGcMSUw
+IwYDVQQDDBxFU1RFQkFOIFJBVUwgQUxWRUFSIENBTERFUk9OMRUwEwYDVQQFEwwwODAzMjIwODM2
+MzQxMDAuBgNVBAsMJ0VOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTjEdMBsG
+A1UECgwUU0VDVVJJVFkgREFUQSBTLkEuIDIxCzAJBgNVBAYTAkVDMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEA0RCmM+SJhbLQvzOi8aRYcVX/oJJ1DLr/ZquFugc09LsDvULbM+K0w5lp
+LV7v5JLFYRIfKtW+xFEeujKBOtP9BXpYQ2mqOjydOkVilZi9BnLrDVqPMcrDU8GYVNTbJbMD3ppd
+K/F/oaJu5WeJRaI7G2DAKnnO/9YDa+GwekPYmRoB2qcT6d0MOKucgLsRqZON03vuvve48wmrkQ9v
+W5A8y4TSbrEDTthzlnVAulhJ2see+/d6xnCikiPKFO6eJFyyN2dICjMYklHn1U/zOCXWroFclUDK
+zKq00r6Sf5ztFERMWdcOfLEsE5S+/9/qA3rYjXOZH/VVlxgRzpG/qsCp+wIDAQABo4IHdjCCB3Iw
+DAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBSMusoRV3glgB1rCktVv42uYt29jzBZBggrBgEFBQcB
+AQRNMEswSQYIKwYBBQUHMAGGPWh0dHA6Ly9vY3NwZ3cuc2VjdXJpdHlkYXRhLm5ldC5lYy9lamJj
+YS9wdWJsaWN3ZWIvc3RhdHVzL29jc3Awgc8GA1UdLgSBxzCBxDCBwaCBvqCBu4aBuGxkYXA6Ly9s
+ZGFwc2RjYTIuc2VjdXJpdHlkYXRhLm5ldC5lYy9DTj1BVVRPUklEQUQgREUgQ0VSVElGSUNBQ0lP
+TiBTVUJDQS0yIFNFQ1VSSVRZIERBVEEsT1U9RU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElO
+Rk9STUFDSU9OLE89U0VDVVJJVFkgREFUQSBTLkEuIDIsQz1FQz9kZWx0YVJldm9jYXRpb25MaXN0
+P2Jhc2UwLgYDVR0RBCcwJYEjaW5ncmlkLmRlbGdhZG9AY290ZWFtY29uc3VsdGluZy5jb20wggEV
+BgNVHSAEggEMMIIBCDBiBgorBgEEAYKmcgIJMFQwUgYIKwYBBQUHAgIwRh5EAEMAZQByAHQAaQBm
+AGkAYwBhAGQAbwAgAGQAZQAgAFIAZQBwAHIAZQBzAGUAbgB0AGEAbgB0AGUAIABMAGUAZwBhAGww
+gaEGCisGAQQBgqZyAgMwgZIwgY8GCCsGAQUFBwIBFoGCaHR0cHM6Ly93d3cuc2VjdXJpdHlkYXRh
+Lm5ldC5lYy93cC1jb250ZW50L2Rvd25sb2Fkcy9Ob3JtYXRpdmFzL1BfZGVfQ2VydGlmaWNhZG9z
+L1BvbGl0aWNhcyBkZSBDZXJ0aWZpY2FkbyBSZXByZXNlbnRhbnRlIExlZ2FsLnBkZjCCAqIGA1Ud
+HwSCApkwggKVMIHloEGgP4Y9aHR0cDovL29jc3Bndy5zZWN1cml0eWRhdGEubmV0LmVjL2VqYmNh
+L3B1YmxpY3dlYi9zdGF0dXMvb2NzcKKBn6SBnDCBmTE5MDcGA1UEAwwwQVVUT1JJREFEIERFIENF
+UlRJRklDQUNJT04gU1VCQ0EtMiBTRUNVUklUWSBEQVRBMTAwLgYDVQQLDCdFTlRJREFEIERFIENF
+UlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04xHTAbBgNVBAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAy
+MQswCQYDVQQGEwJFQzCBx6CBxKCBwYaBvmxkYXA6Ly9sZGFwc2RjYTIuc2VjdXJpdHlkYXRhLm5l
+dC5lYy9DTj1BVVRPUklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUJDQS0yIFNFQ1VSSVRZIERBVEEs
+T1U9RU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OLE89U0VDVVJJVFkgREFU
+QSBTLkEuIDIsQz1FQz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2UwgeCggd2ggdqGgddo
+dHRwczovL3BvcnRhbC1vcGVyYWRvcjIuc2VjdXJpdHlkYXRhLm5ldC5lYy9lamJjYS9wdWJsaWN3
+ZWIvd2ViZGlzdC9jZXJ0ZGlzdD9jbWQ9Y3JsJmlzc3Vlcj1DTj1BVVRPUklEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBTVUJDQS0yIFNFQ1VSSVRZIERBVEEsT1U9RU5USURBRCBERSBDRVJUSUZJQ0FDSU9O
+IERFIElORk9STUFDSU9OLE89U0VDVVJJVFkgREFUQSBTLkEuIDIsQz1FQzAdBgNVHQ4EFgQUo3P3
+RQ8xws+2zUqE5/FWY5GcIdAwKwYDVR0QBCQwIoAPMjAyMjAzMDgxMzI2NTBagQ8yMDI0MDMwNzEz
+MjY1MFowCwYDVR0PBAQDAgXgMB8GCisGAQQBgqZyAwUEEQwPR0VSRU5URSBHRU5FUkFMMBoGCisG
+AQQBgqZyAwEEDAwKMTcxMDY4MzkyOTAVBgorBgEEAYKmcgMJBAcMBVFVSVRPMBEGCisGAQQBgqZy
+AyIEAwwBLjA0BgorBgEEAYKmcgMHBCYMJEFMT05TTyBUT1JSRVMgUyBOIFkgRURNVU5ETyBDQVJW
+QUpBTDAcBgorBgEEAYKmcgMCBA4MDEVTVEVCQU4gUkFVTDAfBgorBgEEAYKmcgMgBBEMDzAwMjAw
+MTAwMDMyNDQyNTATBgorBgEEAYKmcgMhBAUMA1BGWDAXBgorBgEEAYKmcgMMBAkMB0VDVUFET1Iw
+FgYKKwYBBAGCpnIDAwQIDAZBTFZFQVIwQQYKKwYBBAGCpnIDCgQzDDFXQVggQU5EIFRBTiBDRU5U
+Uk9TIERFIERFUElMQUNJT04gWSBCUk9OQ0VBRE8gUy5BMB0GCisGAQQBgqZyAwsEDwwNMTc5MjQw
+Nzg5MzAwMTASBgorBgEEAYKmcgMdBAQMAk5vMBgGCisGAQQBgqZyAwQECgwIQ0FMREVST04wGgYK
+KwYBBAGCpnIDCAQMDAowOTk4Mzc0NDE3MA0GCSqGSIb3DQEBCwUAA4ICAQAssA5lJbDj/v/NjUqV
+omdpeGKhfeH34QEJa+hR78Uo01WwZaPOqOTyvCOFwtSIs9lVUwjV41F29VQsMJuZRESLnORn563v
+KGoDYrq7QiOWU9rJFMGOavbyj3rtIYz+27SoLT0XsNMSR333BpHbH4t0unhf+L8mgHKsSYW5VB0Y
+GvIvk7FqwQD3XOSfJH/nQkqxgQscD/ulTdQaACB+d3mZ/dlbBSdTvQ4fQBtdBxd3EUt9zDdk3V+M
+Dp5O+6NCYa2T7SQeI9RIEh7mU9tIm/qraFgDAUB3WpXefHyVQkmEPgdhZtLdKP+MGEKZpZcaLS4h
+wjhyfS3vK42IEcxYhMyP17MeXbes1XYG+CXVtjumCA9/MbFJHdodk3X6EH11w2pak7oS7Rrczh47
+Vo3BXYgy0QsOGje7HweEHkmk5BDaHsB4o+WQS/BZoILZIngM3Oy9HAN63VFddzW7WXCitlqjQn1f
+bODSTRA86DE8doCLIi9h64xrdZMCHY4qHveNM3S6gE1wrQG53HMYOTGjRil3nMYc7KcZ6wz3q/Cv
+lRo5qKZltj4Z88FbrUuuRgYL7VwOnELin1Jx73eV26Xfjh5FZPdURS2esPcU2Pc3z1qf+Yu4z3+c
+USKW+uIs+k4nbiillOlgJqtiuoLIiWWW1EHM4FiyW1tXqYelCqRkQYkqfA==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+0RCmM+SJhbLQvzOi8aRYcVX/oJJ1DLr/ZquFugc09LsDvULbM+K0w5lpLV7v5JLFYRIfKtW+xFEe
+ujKBOtP9BXpYQ2mqOjydOkVilZi9BnLrDVqPMcrDU8GYVNTbJbMD3ppdK/F/oaJu5WeJRaI7G2DA
+KnnO/9YDa+GwekPYmRoB2qcT6d0MOKucgLsRqZON03vuvve48wmrkQ9vW5A8y4TSbrEDTthzlnVA
+ulhJ2see+/d6xnCikiPKFO6eJFyyN2dICjMYklHn1U/zOCXWroFclUDKzKq00r6Sf5ztFERMWdcO
+fLEsE5S+/9/qA3rYjXOZH/VVlxgRzpG/qsCp+w==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature103022-Object404698"><etsi:QualifyingProperties Target="#Signature103022"><etsi:SignedProperties Id="Signature103022-SignedProperties623230"><etsi:SignedSignatureProperties><etsi:SigningTime>2023-01-08T13:23:28-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>fJ+6zEH+8kSjIjoMlZWPXCsbt20=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUBCA-2 SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A. 2,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1166968998</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-254452"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

@@ -24,7 +24,8 @@
     "openai": "^6.15.0",
     "pdf-parse": "^1.1.1",
     "pg": "^8.16.3",
-    "tesseract.js": "^7.0.0"
+    "tesseract.js": "^7.0.0",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"
