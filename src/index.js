@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import path from "path";
+import rucRoutes from "./routes/ruc.routes.js";
 import { fileURLToPath } from "url";
 
 /* =========================
@@ -77,6 +78,7 @@ app.use("/api/protegido", tuRutaProtegida);
 app.use("/api/invoices", invoiceRoutes);
 app.use("/api/reminders", reminderRoutes);
 app.use("/api/upload", uploadRoutes);
+app.use("/api/ruc", rucRoutes);
 
 /* =========================
    HEALTH CHECK

@@ -87,9 +87,6 @@ CREATE TABLE IF NOT EXISTS public.ruc_razon_social (
     CONSTRAINT chk_ruc_len CHECK (length(ruc) IN (10,13))
 );
 
-CREATE INDEX IF NOT EXISTS idx_ruc_razon_social_ruc
-ON public.ruc_razon_social (ruc);
-
 -- TAX INTEGRATIONS
 CREATE TABLE IF NOT EXISTS public.tax_integrations (
     id SERIAL PRIMARY KEY,
