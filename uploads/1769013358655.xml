@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>0701202101170684729800120010020000698830006988310</numeroAutorizacion>
+<fechaAutorizacion>2021-01-07T16:34:13-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+<infoTributaria>
+<ambiente>2</ambiente>
+<tipoEmision>1</tipoEmision>
+<razonSocial>CHIRIBOGA PAZMINO DIEGO XAVIER </razonSocial>
+<nombreComercial>CHIRIBOGA PAZMINO DIEGO XAVIER </nombreComercial>
+<ruc>1706847298001</ruc>
+<claveAcceso>0701202101170684729800120010020000698830006988310</claveAcceso>
+<codDoc>01</codDoc>
+<estab>001</estab>
+<ptoEmi>002</ptoEmi>
+<secuencial>000069883</secuencial>
+<dirMatriz>LUIS CORDERO  565 Y BOLIVAR</dirMatriz>
+</infoTributaria>
+<infoFactura>
+<fechaEmision>07/01/2021</fechaEmision>
+<dirEstablecimiento>LUIS CORDERO  565 Y BOLIVAR</dirEstablecimiento>
+<contribuyenteEspecial>000</contribuyenteEspecial>
+<obligadoContabilidad>SI</obligadoContabilidad>
+<tipoIdentificacionComprador>05</tipoIdentificacionComprador>
+<razonSocialComprador>OSCAR DIMITRI DIAZ SANDOVAL</razonSocialComprador>
+<identificacionComprador>1708191141</identificacionComprador>
+<totalSinImpuestos>35.34</totalSinImpuestos>
+<totalDescuento>0.00</totalDescuento>
+<totalConImpuestos>
+<totalImpuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>0</codigoPorcentaje>
+<baseImponible>0.60</baseImponible>
+<valor>0.00</valor>
+</totalImpuesto>
+<totalImpuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>2</codigoPorcentaje>
+<baseImponible>34.74</baseImponible>
+<valor>4.17</valor>
+</totalImpuesto>
+</totalConImpuestos>
+<propina>0.00</propina>
+<importeTotal>39.51</importeTotal>
+<moneda>DOLAR</moneda>
+<pagos>
+<pago>
+<formaPago>01</formaPago>
+<total>39.51</total>
+<plazo>0</plazo>
+<unidadTiempo>dias</unidadTiempo>
+</pago>
+</pagos>
+</infoFactura>
+<detalles>
+<detalle>
+<codigoPrincipal>CJN014502</codigoPrincipal>
+<codigoAuxiliar>CJN014502</codigoAuxiliar>
+<descripcion>(2) RECONOCIMIENTO DE FIRMAS</descripcion>
+<cantidad>1.00000</cantidad>
+<precioUnitario>24.00000</precioUnitario>
+<descuento>0.00</descuento>
+<precioTotalSinImpuesto>24.00</precioTotalSinImpuesto>
+<impuestos>
+<impuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>2</codigoPorcentaje>
+<tarifa>12.00</tarifa>
+<baseImponible>24.00</baseImponible>
+<valor>2.88</valor>
+</impuesto>
+</impuestos>
+</detalle>
+<detalle>
+<codigoPrincipal>ACJN00172</codigoPrincipal>
+<codigoAuxiliar>ACJN00172</codigoAuxiliar>
+<descripcion>(2) CONSULTA DATOS BIOMETRICOS  SISTEMA NACIONAL DE IDENTIFICACIÓN CIUDADANA -  REGISTRO CIVIL (D)</descripcion>
+<cantidad>1.00000</cantidad>
+<precioUnitario>0.60000</precioUnitario>
+<descuento>0.00</descuento>
+<precioTotalSinImpuesto>0.60</precioTotalSinImpuesto>
+<impuestos>
+<impuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>0</codigoPorcentaje>
+<tarifa>0.00</tarifa>
+<baseImponible>0.60</baseImponible>
+<valor>0.00</valor>
+</impuesto>
+</impuestos>
+</detalle>
+<detalle>
+<codigoPrincipal>CJ001</codigoPrincipal>
+<codigoAuxiliar>CJ001</codigoAuxiliar>
+<descripcion>(6) CERTIFICACIÓN DE DOCUMENTOS EXHIBIDOS EN ORIGINALES O COPIAS CERTIFICADAS (D)</descripcion>
+<cantidad>1.00000</cantidad>
+<precioUnitario>10.74000</precioUnitario>
+<descuento>0.00</descuento>
+<precioTotalSinImpuesto>10.74</precioTotalSinImpuesto>
+<impuestos>
+<impuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>2</codigoPorcentaje>
+<tarifa>12.00</tarifa>
+<baseImponible>10.74</baseImponible>
+<valor>1.29</valor>
+</impuesto>
+</impuestos>
+</detalle>
+</detalles>
+<infoAdicional>
+<campoAdicional nombre="Dirección">SANGOLQUI, AVEMNIDA RUMIÑAHUI</campoAdicional>
+<campoAdicional nombre="Teléfono">2336251</campoAdicional>
+<campoAdicional nombre="Email">oscardiasa@hotmail.com</campoAdicional>
+</infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature233419">
+<ds:SignedInfo Id="Signature-SignedInfo319584">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></ds:CanonicalizationMethod>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></ds:SignatureMethod>
+<ds:Reference Id="SignedPropertiesID1045467" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature233419-SignedProperties577944">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>1/5XahmJ5YaSi6HK8PG44QrtFrw=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1761740">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>+gUJVGIhY5Imvn/cHiv9rjUt6dI=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-724189" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>DzdE3HWwiH3aNHurs/CmrjLXKFo=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue489431">
+tulGd88YRt1FYIMDiu/qN/K5FPHJkGasyQXrRRimoRREGgXyK4pF6R84Qr+QhJGl58kscisbNAyU
+iOI795rzQbX6EtgNXwMo6Qkg5nOASiq3xDWaEHM83t5EWBM31W5KlZ80+MlHyhcH9Ey+C2q3DuSt
+YJpBi05EJ79/Ao+fUfdZ/tSZeCHryBGNF0kdHFZp/olANPjmfpZpoBbzOT5PAD1PU8dWYGh5CISK
+J57sXZz5nnM+n0mlBrKyQS0+WGx3dKsBRSlTKQqUtUd1jGfcT7rKKxgSToMo40+GpCL1wtqVAYlU
+pTaWcWSHE91MsS3IwpX5GkIAuxmGOOGE7QYv4g==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1761740">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJ0DCCB7igAwIBAgIEW2JD4zANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTIwMDExMDE0NTk1NloXDTIyMDExMDE1Mjk1
+NlowgbYxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE6MBEGA1UEBRMKMDAwMDI1MjAzMTAlBgNVBAMTHkRJRUdPIFhBVklFUiBD
+SElSSUJPR0EgUEFaTUlOTzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALn4iZutZMVL
+pbb5Plp7ykcScPfHaEoau1bCVLnIqPkGzGw79ILUT+RgFwAeGUMRguk48Sp2tFG/61TGXiPSLB9Y
+2iYoOU8w8s9nUxXyjhZ3C+5FurXS6i6LGb8Nl3nPGV5S+qmGB/E2dq84amkd5zF0LKqSIv297HP3
+U6751Vu6OYk53FS5UCiA3rW/Ny1FwkZWnfo7v1Wn/lCXy15nsiJfV0zwgWuTfagf/HQf/H2fK9yD
+8Xc/1X1dZZxvKK1x9aVviKzW04wbsrcYNOKfSfstmtV9XdJcXlzwRPbJOHV+gt0P0pf5YD50WY5f
+HqcQ3PVuxWlr6ZWJnfLOdoyswwcCAwEAAaOCBPcwggTzMAsGA1UdDwQEAwIHgDBmBgNVHSAEXzBd
+MFsGCysGAQQBgqg7AgEBMEwwSgYIKwYBBQUHAgEWPmh0dHA6Ly93d3cuZWNpLmJjZS5lYy9wb2xp
+dGljYS1jZXJ0aWZpY2Fkby9wZXJzb25hLW5hdHVyYWwucGRmMIGRBggrBgEFBQcBAQSBhDCBgTA+
+BggrBgEFBQcwAYYyaHR0cDovL29jc3AuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVz
+L29jc3AwPwYIKwYBBQUHMAGGM2h0dHA6Ly9vY3NwMS5lY2kuYmNlLmVjL2VqYmNhL3B1YmxpY3dl
+Yi9zdGF0dXMvb2NzcDAaBgorBgEEAYKoOwMBBAwTCjE3MDY4NDcyOTgwHAYKKwYBBAGCqDsDAgQO
+EwxESUVHTyBYQVZJRVIwGQYKKwYBBAGCqDsDAwQLEwlDSElSSUJPR0EwFwYKKwYBBAGCqDsDBAQJ
+EwdQQVpNSU5PMDEGCisGAQQBgqg7AwcEIxMhTjRDIDE4IDE4IERFIE1BWU8gUEIgU0cgIENPTk9D
+T1RPMBkGCisGAQQBgqg7AwgECxMJMDIyMzMzNjQ0MBUGCisGAQQBgqg7AwkEBxMFUXVpdG8wFwYK
+KwYBBAGCqDsDDAQJEwdFQ1VBRE9SMB0GCisGAQQBgqg7AwsEDxMNMTcwNjg0NzI5ODAwMTAaBgor
+BgEEAYKoOwMyBAwTCjE3MDY4NDcyOTgwIAYKKwYBBAGCqDsDMwQSExBTT0ZUV0FSRS1BUkNISVZP
+MCkGA1UdEQQiMCCBHmNoaXJpYm9nYWNvbnN1bHRvcmVzQGdtYWlsLmNvbTCCAd8GA1UdHwSCAdYw
+ggHSMIIBzqCCAcqgggHGhoHVbGRhcDovL2JjZXFsZGFwc3VicDEuYmNlLmVjL2NuPUNSTDkwMyxj
+bj1BQyUyMEJBTkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVDVUFET1IsbD1RVUlUTyxvdT1FTlRJREFE
+JTIwREUlMjBDRVJUSUZJQ0FDSU9OJTIwREUlMjBJTkZPUk1BQ0lPTi1FQ0lCQ0Usbz1CQU5DTyUy
+MENFTlRSQUwlMjBERUwlMjBFQ1VBRE9SLGM9RUM/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9i
+YXNlhjRodHRwOi8vd3d3LmVjaS5iY2UuZWMvQ1JML2VjaV9iY2VfZWNfY3JsZmlsZWNvbWIuY3Js
+pIG1MIGyMQswCQYDVQQGEwJFQzEiMCAGA1UEChMZQkFOQ08gQ0VOVFJBTCBERUwgRUNVQURPUjE3
+MDUGA1UECxMuRU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OLUVDSUJDRTEO
+MAwGA1UEBxMFUVVJVE8xJTAjBgNVBAMTHEFDIEJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxDzAN
+BgNVBAMTBkNSTDkwMzArBgNVHRAEJDAigA8yMDIwMDExMDE0NTk1NlqBDzIwMjIwMTEwMTUyOTU2
+WjAfBgNVHSMEGDAWgBRIot8jHx34LFF6jAPNSTKlCcGUqzAdBgNVHQ4EFgQUt+nWxH6B0ytIJ6A0
+MuiBQaKIsxMwCQYDVR0TBAIwADAZBgkqhkiG9n0HQQAEDDAKGwRWOC4xAwIEsDANBgkqhkiG9w0B
+AQsFAAOCAgEAKmBJF3Eh94mAEm3FpOZicJKCHJeMec1ECDq7AHCzEEq33AykwpKp7ykpALWEVvZB
+cM9cdgY0ClsnZGa4x4ust9/Wse+hp/rUI36YFfSRhp7DsiQNGPELB5k9vGc0fVWH1KKBaDz31YYs
+nLfl6RmH91KSvkYCnF2TbgtrjGSC+g8DwQ90bLP/TbP6AzgXBwhk/s9CEZzmjWd1cwGiKD7//AB9
+23bu4X0eAZTu7AwY2kRCPvPxfl4+ocQuWepCSkreD5WVXp5UBcjax4Abs49eHWhXkYEGTs653xFT
+70aD/o6W+aRCQizQ1DYFKI8DNGO7UhGSPQ30CgzaauSBshLxEAqnV4ViWgegcq7xrDXeAnOr2vDl
+FiKJ4xp/OuSrAIxQjEzl8aeyTpxk/v+FJgxyuelLWvQXE3ricFy/5XjzvWRRGK5ch+rN3vjEoC6G
+yaFeEeRMDyZqtULKBRp4ZjSPU8FFrI+4OYRqRALjTjw1J+F/BHm0ECqS9D8VfzLBXDQBUDE2W2Dm
+BWf7LKlOzTfgFMQzsLIkoy3d/LMOg2Jw1cX2HrL4xI+PmN4SjEFJgt5/aPBovQgs7XDgtbOs3R4X
+Un2fc12iXftxIpKXvSk/eZfv1j83j1culuOWkG8zrNDzatACe47at2iQ4fIzXVMdktGIG9hKfF+7
+8c9cabJK9rA=
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+ufiJm61kxUultvk+WnvKRxJw98doShq7VsJUucio+QbMbDv0gtRP5GAXAB4ZQxGC6TjxKna0Ub/r
+VMZeI9IsH1jaJig5TzDyz2dTFfKOFncL7kW6tdLqLosZvw2Xec8ZXlL6qYYH8TZ2rzhqaR3nMXQs
+qpIi/b3sc/dTrvnVW7o5iTncVLlQKIDetb83LUXCRlad+ju/Vaf+UJfLXmeyIl9XTPCBa5N9qB/8
+dB/8fZ8r3IPxdz/VfV1lnG8orXH1pW+IrNbTjBuytxg04p9J+y2a1X1d0lxeXPBE9sk4dX6C3Q/S
+l/lgPnRZjl8epxDc9W7FaWvplYmd8s52jKzDBw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature233419-Object135013"><etsi:QualifyingProperties Target="#Signature233419"><etsi:SignedProperties Id="Signature233419-SignedProperties577944"><etsi:SignedSignatureProperties><etsi:SigningTime>2021-01-07T16:34:12-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>yYRt8Qhf4gn1oF4dZtPF9QnzMPQ=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1533166563</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-724189"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

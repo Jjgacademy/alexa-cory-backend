@@ -1,122 +1,223 @@
-import Tesseract from "tesseract.js";
+import vision from "@google-cloud/vision";
 import fs from "fs";
 import { createRequire } from "module";
+
+console.log("Google key:", process.env.GOOGLE_APPLICATION_CREDENTIALS);
 
 const require = createRequire(import.meta.url);
 const pdf = require("pdf-parse");
 
+// Cliente Google Vision
+const client = new vision.ImageAnnotatorClient();
+
 // ===========================
-// 1️⃣ LECTURA DEL ARCHIVO
+// LECTURA OCR (VISION API)
 // ===========================
 export const leerFactura = async (filePath) => {
-  // Si es PDF
+  // PDF → leer texto directo
   if (filePath.toLowerCase().endsWith(".pdf")) {
     const buffer = fs.readFileSync(filePath);
     const data = await pdf(buffer);
-    return data.text || "";
+    const textoPdf = data.text || "";
+    console.log("========== OCR TEXTO ==========");
+    console.log(textoPdf);
+    console.log("================================");
+    return textoPdf;
   }
 
-  // Si es imagen (PNG, JPG, etc.)
-  const resultado = await Tesseract.recognize(filePath, "spa");
-  return resultado.data.text || "";
+  // Imagen → Google Vision
+  const [result] = await client.textDetection(filePath);
+  const detections = result.textAnnotations;
+
+  const texto = detections?.[0]?.description || "";
+
+  console.log("========== OCR TEXTO ==========");
+  console.log(texto);
+  console.log("================================");
+
+  return texto;
 };
 
 // ===========================
-// Helpers
+// HELPERS SEGUROS
 // ===========================
-const normalizarNumero = (valorTexto) => {
-  if (!valorTexto) return "0.00";
-  const limpio = valorTexto.replace(/\./g, "").replace(",", ".");
-  const numero = parseFloat(limpio);
-  if (isNaN(numero)) return "0.00";
-  return numero.toFixed(2);
+const safeTrim = (v) => (typeof v === "string" ? v.trim() : "");
+const limpiarEspacios = (t) => safeTrim((t || "").replace(/\s+/g, " "));
+
+/**
+ * buscarMatch:
+ * - Acepta regex con o sin grupos
+ * - Si hay grupo 1, devuelve grupo 1
+ * - Si NO hay grupo 1, devuelve el match completo
+ * - Si no match, null
+ */
+const buscarMatch = (texto, regex) => {
+  const m = (texto || "").match(regex);
+  if (!m) return null;
+
+  // Si hay grupo capturado
+  if (m[1] !== undefined && m[1] !== null && `${m[1]}` !== "") {
+    return limpiarEspacios(String(m[1]));
+  }
+
+  // Si no hay grupo, devuelve el match completo
+  return limpiarEspacios(String(m[0]));
 };
 
-const extraerClaveAcceso = (texto) => {
-  const clean = texto.replace(/\s+/g, "");
-  const match = clean.match(/\b\d{44,50}\b/);
-  return match ? match[0] : null;
+const soloDigitos = (s) => (s || "").replace(/[^\d]/g, "");
+
+/**
+ * Convierte fechas OCR a YYYY-MM-DD.
+ * Soporta:
+ *  - 16-01-2026
+ *  - 16/01/2026
+ *  - 20/10/2025
+ *  - "30/ABRIL/2025" (meses en español)
+ */
+const parseFechaOCR = (raw) => {
+  if (!raw) return null;
+
+  const txt = limpiarEspacios(raw).toUpperCase();
+
+  // 1) dd-mm-yyyy / dd/mm/yyyy / dd.mm.yyyy
+  let m = txt.match(/(\d{2})[\/\-.](\d{2})[\/\-.](\d{4})/);
+  if (m) return `${m[3]}-${m[2]}-${m[1]}`;
+
+  // 2) dd/MES/yyyy (MES en español)
+  m = txt.match(/(\d{1,2})[\/\-.]([A-ZÁÉÍÓÚÑ]+)[\/\-.](\d{4})/);
+  if (m) {
+    const dd = String(m[1]).padStart(2, "0");
+    const mes = m[2]
+      .replace("Á", "A")
+      .replace("É", "E")
+      .replace("Í", "I")
+      .replace("Ó", "O")
+      .replace("Ú", "U");
+
+    const map = {
+      ENERO: "01",
+      FEBRERO: "02",
+      MARZO: "03",
+      ABRIL: "04",
+      MAYO: "05",
+      JUNIO: "06",
+      JULIO: "07",
+      AGOSTO: "08",
+      SEPTIEMBRE: "09",
+      SETIEMBRE: "09",
+      OCTUBRE: "10",
+      NOVIEMBRE: "11",
+      DICIEMBRE: "12",
+    };
+
+    const mm = map[mes] || null;
+    if (mm) return `${m[3]}-${mm}-${dd}`;
+  }
+
+  // 3) Si viene algo raro tipo "14.0, 2026." → no inventar
+  return null;
 };
 
 // ===========================
-// 2️⃣ ANALIZAR FACTURA
+// PARSER NOTA DE VENTA
 // ===========================
 export const analizarTextoFactura = (texto) => {
-  // Número tipo 001-100-000005584
-  const numero_factura =
-    texto.match(/\b\d{3}[-\s]\d{3}[-\s]?\d+\b/)?.[0] || null;
 
-  // RUC 13 dígitos
-  const ruc = texto.match(/\b\d{13}\b/)?.[0] || null;
+  const limpio = texto.replace(/\r/g, "");
+  const lineas = limpio.split("\n").map(l => l.trim()).filter(Boolean);
+  const todo = lineas.join(" ");
 
-  // Proveedor – intenta leer línea después de Nombres:
-  let proveedor = null;
-  const provMatch = texto.match(/Nombres?:\s*([\s\S]*?)\n/);
-  if (provMatch) proveedor = provMatch[1].trim();
+  /* ======================
+     PROVEEDOR
+  ====================== */
 
-  // SUBTOTAL
-  const matchSubNeto = texto.match(/Subtotal\s*(Neto)?:?\s*\$?\s*([0-9.,]+)/i);
-  const matchSubSimple = texto.match(/Subtotal\s*[:\-]?\s*\$?\s*([0-9.,]+)/i);
-  let subtotalTxt = matchSubNeto?.[2] || matchSubSimple?.[1] || null;
-  const subtotal = normalizarNumero(subtotalTxt);
+  const nombre = lineas[0] || "";
 
-  // IVA
-  const matchIvaPor = texto.match(/IVA\s*\d{1,2}\s*%?\s*\$?\s*([0-9.,]+)/i);
-  const matchIvaSimple = texto.match(/IVA\s*[:\-]?\s*\$?\s*([0-9.,]+)/i);
-  let ivaTxt = matchIvaPor?.[1] || matchIvaSimple?.[1] || null;
-  const iva = normalizarNumero(ivaTxt);
+  const direccion = (todo.match(/Direcci[oó]n[:\s]*(.+?)(Cel|RUC|CONTRIBUYENTE)/i)?.[1] || "").trim();
 
-  // TOTAL
-  const matchValorTotal = texto.match(/VALOR\s*TOTAL\s*\$?\s*([0-9.,]+)/i);
-  const matchTotalSimple = texto.match(/TOTAL\s*\$?\s*([0-9.,]+)/i);
-  let totalTxt = matchValorTotal?.[1] || matchTotalSimple?.[1] || null;
-  const total = normalizarNumero(totalTxt);
+  const celular = (todo.match(/Cel[:.\s]*([0-9\s]+)/i)?.[1] || "").replace(/\s/g, "");
 
-  // Fecha dd/mm/yyyy
-  let fechaEmision = null;
-  const matchFecha = texto.match(/(\d{2})[\/\-](\d{2})[\/\-](\d{4})/);
-  if (matchFecha) {
-    const [_, dd, mm, yyyy] = matchFecha;
-    fechaEmision = `${yyyy}-${mm}-${dd}`;
+  const ciudad = (todo.match(/Quito.*Ecuador/i)?.[0] || "");
+
+  const ruc = (todo.match(/R\.?U\.?C\.?\s*([0-9]{10,13})/i)?.[1] || "");
+
+  const contribuyente = (todo.match(/CONTRIBUYENTE.*RIMPE/i)?.[0] || "");
+
+  /* ======================
+     FECHA EMISIÓN
+  ====================== */
+
+  let fecha = "";
+  const fechaMatch = todo.match(/(\d{2})[\/\-](\d{2})[\/\-](\d{4})/);
+
+  if (fechaMatch) {
+    fecha = `${fechaMatch[3]}-${fechaMatch[2]}-${fechaMatch[1]}`;
   }
 
-  // Clave de acceso
-  const claveAcceso = extraerClaveAcceso(texto);
+  /* ======================
+     NOTA / FACTURA
+  ====================== */
 
-  // Clasificación simple
-  let categoria = "SIN CLASIFICAR";
-  const up = texto.toUpperCase();
+  const notaVenta = (todo.match(/(\d{3}-\d{3}-\d{2})/)?.[1] || "");
+  const factura = (todo.match(/\b\d{5,9}\b/)?.[0] || "");
 
-  if (up.includes("SERVICIOS LEGALES")) categoria = "SERVICIOS PROFESIONALES";
-  else if (up.includes("SUPERMAXI") || up.includes("COMISARIATO"))
-    categoria = "SUPERMERCADO";
-  else if (up.includes("HOTEL") || up.includes("HOSPEDAJE"))
-    categoria = "ALOJAMIENTO";
+  const autorizacion = (todo.match(/Autorizaci[oó]n.*?([0-9]{6,})/i)?.[1] || "");
 
-  // ===========================
-  // Score de confianza
-  // ===========================
-  let score = 0;
-  if (numero_factura) score += 25;
-  if (ruc) score += 25;
-  if (total !== "0.00") score += 25;
-  if (fechaEmision) score += 25;
+  /* ======================
+     DETALLE AUTOMÁTICO
+  ====================== */
 
-  let estado_ocr = "PENDIENTE";
-  if (score >= 75) estado_ocr = "OK";
-  else if (score >= 50) estado_ocr = "REVISAR";
+  const items = [];
+
+  for (const l of lineas) {
+
+    if (/^\d+\s+/.test(l)) {
+      const m = l.match(/^(\d+)\s+(.+)/);
+
+      if (m) {
+        items.push({
+          cantidad: m[1],
+          descripcion: m[2],
+          unitario: "",
+          total: "",
+        });
+      }
+    }
+  }
+
+  /* ======================
+     TOTAL
+  ====================== */
+
+  const totalMatch = todo.match(/TOTAL\s*\$?\s*([0-9.,]+)/i);
+  const total = totalMatch ? totalMatch[1].replace(",", ".") : "0.00";
+
+  /* ======================
+     FORMA DE PAGO
+  ====================== */
+
+  const formaPago = {
+    efectivo: /efectivo/i.test(todo),
+    tarjeta: /tarjeta/i.test(todo),
+    electronico: /electr[oó]nico/i.test(todo),
+    otros: /otros/i.test(todo),
+  };
 
   return {
-    numero_factura,
-    ruc,
-    proveedor,
-    subtotal,
-    iva,
+    proveedor: {
+      nombre,
+      direccion,
+      celular,
+      ciudad,
+      ruc,
+      contribuyente,
+      notaVenta,
+      factura,
+      autorizacion,
+      fecha,
+    },
+    items,
     total,
-    fechaEmision,
-    categoria,
-    claveAcceso,
-    confianza: score,
-    estado_ocr,
+    formaPago,
   };
 };

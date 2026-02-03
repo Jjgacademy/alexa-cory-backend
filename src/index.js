@@ -37,6 +37,7 @@ import tuRutaProtegida from "./routes/tuRutaProtegida.routes.js";
 import invoiceRoutes from "./routes/invoice.routes.js";
 import reminderRoutes from "./routes/reminder.routes.js";
 import uploadRoutes from "./routes/upload.routes.js";
+import ocrRoutes from "./routes/ocr.routes.js";
 
 import "./services/reminder.service.js";
 
@@ -78,6 +79,7 @@ app.use("/api/protegido", tuRutaProtegida);
 app.use("/api/invoices", invoiceRoutes);
 app.use("/api/reminders", reminderRoutes);
 app.use("/api/upload", uploadRoutes);
+app.use("/api/ocr", ocrRoutes);
 app.use("/api/ruc", rucRoutes);
 
 /* =========================

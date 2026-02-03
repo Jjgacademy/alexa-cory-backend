@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>0701202101179036333300120010860001792170000000117</numeroAutorizacion>
+<fechaAutorizacion>2021-01-07T19:12:56-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="2.1.0">
+    <infoTributaria>
+        <ambiente>2</ambiente>
+        <tipoEmision>1</tipoEmision>
+        <razonSocial>ECUASANITAS S.A.</razonSocial>
+        <nombreComercial>ECUASANITAS</nombreComercial>
+        <ruc>1790363333001</ruc>
+        <claveAcceso>0701202101179036333300120010860001792170000000117</claveAcceso>
+        <codDoc>01</codDoc>
+        <estab>001</estab>
+        <ptoEmi>086</ptoEmi>
+        <secuencial>000179217</secuencial>
+        <dirMatriz>La Rabida y La Pinta</dirMatriz>
+    </infoTributaria>
+    <infoFactura>
+        <fechaEmision>07/01/2021</fechaEmision>
+        <dirEstablecimiento>Quito, La Rábida N26-71 y La Pinta, Telf: 2547066</dirEstablecimiento>
+        <contribuyenteEspecial>02239</contribuyenteEspecial>
+        <obligadoContabilidad>SI</obligadoContabilidad>
+        <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+        <razonSocialComprador>DIAZ SANDOVAL OSCAR DIMITRI</razonSocialComprador>
+        <identificacionComprador>1708191141001</identificacionComprador>
+        <direccionComprador>QUITO: AVENIDA ABDON CALDERON, N13-04 y RIO FRIIO</direccionComprador>
+        <totalSinImpuestos>325.89</totalSinImpuestos>
+        <totalDescuento>0.00</totalDescuento>
+        <totalConImpuestos>
+            <totalImpuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>0</codigoPorcentaje>
+                <baseImponible>325.89</baseImponible>
+                <tarifa>0.00</tarifa>
+                <valor>0.00</valor>
+            </totalImpuesto>
+        </totalConImpuestos>
+        <propina>0</propina>
+        <importeTotal>327.52</importeTotal>
+        <moneda>DOLAR</moneda>
+        <pagos>
+            <pago>
+                <formaPago>20</formaPago>
+                <total>327.52</total>
+                <plazo>0</plazo>
+                <unidadTiempo>dias</unidadTiempo>
+            </pago>
+        </pagos>
+    </infoFactura>
+    <detalles>
+        <detalle>
+            <codigoPrincipal>CN</codigoPrincipal>
+            <descripcion>CUOTA NORMAL enero 2021</descripcion>
+            <cantidad>1.00</cantidad>
+            <precioUnitario>325.890000</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>325.89</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Comentario" valor="1/1 CN, del: 2021-01-01"/>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>0</codigoPorcentaje>
+                    <tarifa>0.00</tarifa>
+                    <baseImponible>325.89</baseImponible>
+                    <valor>0.00</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+    </detalles>
+    <otrosRubrosTerceros>
+        <rubro>
+            <concepto>SEGURO CAMPESINO 0.50%</concepto>
+            <total>1.63</total>
+        </rubro>
+    </otrosRubrosTerceros>
+    <infoAdicional>
+        <campoAdicional nombre="Correo">anitamoyav@hotmail.com</campoAdicional>
+        <campoAdicional nombre="Teléfono">0998305982</campoAdicional>
+        <campoAdicional nombre="Dirección cliente">QUITO: AVENIDA ABDON CALDERON, N13-04 y RIO FRIIO</campoAdicional>
+        <campoAdicional nombre="Observación">CO: 2021-01-01</campoAdicional>
+        <campoAdicional nombre="Servicios">CO-COBRANZA,</campoAdicional>
+        <campoAdicional nombre="Contrato">502777</campoAdicional>
+    </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-6127335b-9ba4-401f-86bb-54fd7d2d2a5d"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xmldsig-6127335b-9ba4-401f-86bb-54fd7d2d2a5d-ref0" URI="#comprobante"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>+99qpJe7NzdJzz7/vPTKpwe3OgZhzVcpGfcVRirmV0U=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-6127335b-9ba4-401f-86bb-54fd7d2d2a5d-signedprops"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>L9oiPoKAKZKdl0+O7/xxemYrbA4WVn2txxaDdwgAYw4=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="xmldsig-6127335b-9ba4-401f-86bb-54fd7d2d2a5d-sigvalue">IvF+js+1kePhBC0f4zOCzlsn973Db2OcKuCE1lu79Z1mzhh1hEuMv2ZnRT1vj2lC5oPxQf5qBmjbrejlkyLfM4dS25k7C6i6KXU3I857tJeJIz9Zy6rQqEa0f0meOKFMUsOXhTfy68ZJlL1HDnX8vaRQyOo2amDEmXQCim55fGSeKZOXE+cBnoxDs1MlZaCYQRozxvPnSmSBWDAgOuwNJy6bRne3Ny7hsmXq4ECWPQQA+OY4qnb+JOTMtkloufaS8BUH0u5FmgF3LFpcEsiaS6iycRobnueyrMBSiSfjeQohlg1lnS8O/442ymnhlGfalA46nn0WRQxW+kxxwDHujA==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>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</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:xades141="http://uri.etsi.org/01903/v1.4.1#" Target="#xmldsig-6127335b-9ba4-401f-86bb-54fd7d2d2a5d"><xades:SignedProperties Id="xmldsig-6127335b-9ba4-401f-86bb-54fd7d2d2a5d-signedprops"><xades:SignedSignatureProperties><xades:SigningTime>2021-01-07T19:12:55.941-05:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>I2QuCHXsc2JzJjJEJE1sA8iAUm4onds0YpUUntiTXeg=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1533290670</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xmldsig-6127335b-9ba4-401f-86bb-54fd7d2d2a5d-ref0"><xades:Description>Pruebas de Firma</xades:Description><xades:MimeType>text/xml</xades:MimeType><xades:Encoding>UTF-8</xades:Encoding></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

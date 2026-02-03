@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>1101202101179223024100120011000000139331234567816</numeroAutorizacion>
+<fechaAutorizacion>2021-01-20T08:37:03-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0"> 
+<infoTributaria> 
+<ambiente>2</ambiente> 
+<tipoEmision>1</tipoEmision> 
+<razonSocial>PINTURAS PRODUTEKN CIA LTDA</razonSocial> 
+<nombreComercial>PINTURAS PRODUTEKN CIA LTDA</nombreComercial> 
+<ruc>1792230241001</ruc> 
+<claveAcceso>1101202101179223024100120011000000139331234567816</claveAcceso> 
+<codDoc>01</codDoc> 
+<estab>001</estab> 
+<ptoEmi>100</ptoEmi> 
+<secuencial>000013933</secuencial> 
+<dirMatriz>Parque Industrial del Sur, Av. Turubamba #2 Junto a Bodegas de Familia Sancela</dirMatriz> 
+</infoTributaria> 
+<infoFactura> 
+<fechaEmision>11/01/2021</fechaEmision> 
+<dirEstablecimiento>Parque Industrial del Sur, Av. Turubamba #2 Junto a Bodegas de Familia Sancela</dirEstablecimiento> 
+ 
+<obligadoContabilidad>SI</obligadoContabilidad> 
+<tipoIdentificacionComprador>04</tipoIdentificacionComprador> 
+ 
+<razonSocialComprador>DIAZ SANDOVAL OSCAR DIMITRI </razonSocialComprador> 
+<identificacionComprador>1708191141001</identificacionComprador> 
+<totalSinImpuestos>88.32</totalSinImpuestos> 
+<totalDescuento>50.11</totalDescuento> 
+<totalConImpuestos>
+<totalImpuesto> 
+<codigo>2</codigo>
+<codigoPorcentaje>2</codigoPorcentaje>
+<descuentoAdicional>0</descuentoAdicional>
+<baseImponible>88.32</baseImponible>
+<tarifa>12</tarifa>
+<valor>10.6</valor>
+</totalImpuesto>
+</totalConImpuestos>
+ 
+<propina>0</propina> 
+<importeTotal>98.92</importeTotal> 
+ 
+ <pagos>
+<pago>
+<formaPago>01</formaPago>
+<total>98.92</total>
+<plazo>30</plazo>
+<unidadTiempo>dias</unidadTiempo>
+</pago>
+</pagos>
+ 
+ </infoFactura> 
+<detalles> 
+<detalle>
+<codigoPrincipal>IM043C</codigoPrincipal>
+<descripcion>IMPERMEABILIZANTE 5 ANOS BLANCO CANECA</descripcion>
+<cantidad>1</cantidad>
+<precioUnitario>138.43</precioUnitario>
+<descuento>50.11</descuento>
+<precioTotalSinImpuesto>88.32</precioTotalSinImpuesto>
+<detallesAdicionales>
+<detAdicional nombre="DESCUENTO %" valor="36,20"></detAdicional>
+</detallesAdicionales>
+<impuestos>
+<impuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>2</codigoPorcentaje>
+<tarifa>12</tarifa>
+<baseImponible>88.32</baseImponible>
+<valor>10.6</valor>
+</impuesto>
+</impuestos>
+</detalle>
+</detalles>
+<infoAdicional>
+<campoAdicional nombre="Informacion Adicional">Agente de Retencion Resolucion NAC-DNSCR 0000001 DEL 1 DE OCTUBRE 2020</campoAdicional>
+</infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature539371">
+<ds:SignedInfo Id="Signature-SignedInfo209779">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></ds:CanonicalizationMethod>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></ds:SignatureMethod>
+<ds:Reference Id="SignedPropertiesID784463" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature539371-SignedProperties883950">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>L7WpfhdJi4RXaXb5MUMEeMd0asA=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1849948">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>mlyklMzyVpMhrU9rdaEopdbOWis=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-279998" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>AJIpK3xf9TU3akqEUbjwqAKgMzc=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue913632">
+NdO+lAks3cbnOWFiKaqQtMJlhjHik08lYLvA/MjyLu2zVq927P/5yttCXmTrAcy7kdB2Palntua0
+Ca2oubmsOoLjhrm5XKq5QvdiJKM9KaIA/dnz7oMqEdah++00qZzowU0Y2gsmZxSw/Iig9Tf1OZyU
+f15C9lsyBwhcZs3Xov3AF3gPuN2MVCL1IM2PdVzGGUrtQ+IVTRerMPvvyWYgrX05nYUjpCdCMfjg
+hw/5/+qLnowMuSlFkzymNtZldEHaJXirIdTV06DFtSZytLlr9xRrQPruz9Xbw4KzeihM87aad1cn
+O2UeuIaudDUD6jmKIifeMqH0cijFTXWRs/hBcQ==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1849948">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJtDCCCJygAwIBAgIEXcwX1jANBgkqhkiG9w0BAQsFADCBkzELMAkGA1UEBhMCRUMxGzAZBgNV
+BAoTElNFQ1VSSVRZIERBVEEgUy5BLjEwMC4GA1UECxMnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9O
+IERFIElORk9STUFDSU9OMTUwMwYDVQQDEyxBVVRPUklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUIg
+U0VDVVJJVFkgREFUQTAeFw0yMDAzMDYxOTE5MzZaFw0yMjAzMDYxOTQ5MzZaMIGcMQswCQYDVQQG
+EwJFQzEbMBkGA1UEChMSU0VDVVJJVFkgREFUQSBTLkEuMTAwLgYDVQQLEydFTlRJREFEIERFIENF
+UlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04xPjATBgNVBAUTDDA2MDMyMDE0NDUwNDAnBgNVBAMT
+IFNBTlRJQUdPIEFOSUJBTCBWQVNDT05FWiBTQU5DSEVaMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAxrWFjCjx1QRTQDVXz0ecIpGpBYtQByzzHcyuAP706thjDOuE9cO+GGpAx2OD8LZX
+R2NvIZ7JsU6RqR3oE7jxdghDmflmDxC0K9p7DfYa51gxKUTniNwoMgBzgRYeEsDglAiqLaIh28dy
+U6aUYuxmRB1pgk2VQpMCtMjrJS90iHyoGzkfmtb6HwjYGMuKYGwlLCCPoCS/ez+Th7Q68VgAKJzc
+eabA2ffJfZf++7ceTGWXiFIrnIskosxmbQptUb6NoOZr1S4s9R9bJ7+ZLZrP+ggWxtkjQzYiH50H
+NN0UEqc7x5SF0hztf383GFHAkfyUVUNElarp3U0AvnenHBe54wIDAQABo4IGAzCCBf8wCwYDVR0P
+BAQDAgXgMFkGCCsGAQUFBwEBBE0wSzBJBggrBgEFBQcwAYY9aHR0cDovL29jc3Bndy5zZWN1cml0
+eWRhdGEubmV0LmVjL2VqYmNhL3B1YmxpY3dlYi9zdGF0dXMvb2NzcDCBzAYDVR0gBIHEMIHBMEAG
+CisGAQQBgqZyAgkwMjAwBggrBgEFBQcCAjAkGiJDZXJ0aWZpY2FkbyBkZSBSZXByZXNlbnRhbnRl
+IExlZ2FsMH0GCisGAQQBgqZyAgMwbzBtBggrBgEFBQcCARZhaHR0cHM6Ly93d3cuc2VjdXJpdHlk
+YXRhLm5ldC5lYy9sZXllc19ub3JtYXRpdmFzL1BvbGl0aWNhcyBkZSBDZXJ0aWZpY2FkbyBSZXBy
+ZXNlbnRhbnRlIExlZ2FsLnBkZjAtBgorBgEEAYKmcgMKBB8THVBJTlRVUkFTIFBST0RVVEVLTiBD
+SUEuIExUREEuMB0GCisGAQQBgqZyAwsEDxMNMTc5MjIzMDI0MTAwMTAaBgorBgEEAYKmcgMBBAwT
+CjE3MDkzOTk0MTIwHwYKKwYBBAGCpnIDAgQREw9TQU5USUFHTyBBTklCQUwwGAYKKwYBBAGCpnID
+AwQKEwhWQVNDT05FWjAXBgorBgEEAYKmcgMEBAkTB1NBTkNIRVowHwYKKwYBBAGCpnIDBQQREw9H
+RVJFTlRFIEdFTkVSQUwwHwYKKwYBBAGCpnIDBwQREw9BVi4gVFVSVUJBTUJBIDIwHAYKKwYBBAGC
+pnIDCAQOEww1OTM5ODAyNDc2MTAwFQYKKwYBBAGCpnIDCQQHEwVRVUlUTzAXBgorBgEEAYKmcgMM
+BAkTB0VDVUFET1IwHwYKKwYBBAGCpnIDIAQREw8wMDIwMDEwMDAwNDUzMTkwGwYKKwYBBAGCpnID
+IQQNEwtVU0JTRC0wNDg2MTAoBgNVHREEITAfgR1zYW50aWFnby52YXNjb25lejcxQGdtYWlsLmNv
+bTCCAnsGA1UdHwSCAnIwggJuMIICaqCCAmagggJihj1odHRwOi8vb2NzcGd3LnNlY3VyaXR5ZGF0
+YS5uZXQuZWMvZWpiY2EvcHVibGljd2ViL3N0YXR1cy9vY3NwhoHVbGRhcDovL2RpcmVjdC5zZWN1
+cml0eWRhdGEubmV0LmVjL2NuPUNSTDY0Nixjbj1BVVRPUklEQUQlMjBERSUyMENFUlRJRklDQUNJ
+T04lMjBTVUIlMjBTRUNVUklUWSUyMERBVEEsb3U9RU5USURBRCUyMERFJTIwQ0VSVElGSUNBQ0lP
+TiUyMERFJTIwSU5GT1JNQUNJT04sbz1TRUNVUklUWSUyMERBVEElMjBTLkEuLGM9RUM/Y2VydGlm
+aWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlhoGeaHR0cHM6Ly9kaXJlY3Quc2VjdXJpdHlkYXRhLm5l
+dC5lYy9+Y3JsL2F1dG9yaWRhZF9kZV9jZXJ0aWZpY2FjaW9uX3N1Yl9zZWN1cml0eV9kYXRhX2Vu
+dGlkYWRfZGVfY2VydGlmaWNhY2lvbl9kZV9pbmZvcm1hY2lvbl9jdXJpdHlfZGF0YV9zLmEuX2Nf
+ZWNfY3JsZmlsZS5jcmykgacwgaQxCzAJBgNVBAYTAkVDMRswGQYDVQQKExJTRUNVUklUWSBEQVRB
+IFMuQS4xMDAuBgNVBAsTJ0VOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTjE1
+MDMGA1UEAxMsQVVUT1JJREFEIERFIENFUlRJRklDQUNJT04gU1VCIFNFQ1VSSVRZIERBVEExDzAN
+BgNVBAMTBkNSTDY0NjArBgNVHRAEJDAigA8yMDIwMDMwNjE5MTkzNlqBDzIwMjIwMzA2MTk0OTM2
+WjAfBgNVHSMEGDAWgBT3L0zgdedio3iWWwa2LnE7zGw/kDAdBgNVHQ4EFgQUSKTMksIOT3B817cc
+QmPSzZ3OS/swCQYDVR0TBAIwADAZBgkqhkiG9n0HQQAEDDAKGwRWOC4xAwIDqDANBgkqhkiG9w0B
+AQsFAAOCAQEAOSoMSXR91R9a6nftO3+4mgPePx8pX/fxtCx5GzZq1KjNdBEm+z1/pbX2OzQhjRoX
+dw2zKToGO8CHBHKeBl5DVc53zWgwXpGJDPt3AOZjCl4L8UaKdGzTdrpGsTYSoCQG2vIqqqFgcLcl
+9MMZKdtwaHhivtMPX0PWuhHfhdJzwi51YOtViYHvDsKFnUaDsIBR9k+nt8JMwL0Atu4zdoFNCvhz
+rJCgqoGJ2qurcrriI7+9xoAtST6yOKR8gl7l8VDHYGhD5kTBSdiK/EH5a2T89zM0adLd4CosW1jK
+3sl3bcndPfGFD7tdEoEWh78GrTny5/L8g8JsNN7TiuITgmJUfg==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+xrWFjCjx1QRTQDVXz0ecIpGpBYtQByzzHcyuAP706thjDOuE9cO+GGpAx2OD8LZXR2NvIZ7JsU6R
+qR3oE7jxdghDmflmDxC0K9p7DfYa51gxKUTniNwoMgBzgRYeEsDglAiqLaIh28dyU6aUYuxmRB1p
+gk2VQpMCtMjrJS90iHyoGzkfmtb6HwjYGMuKYGwlLCCPoCS/ez+Th7Q68VgAKJzceabA2ffJfZf+
++7ceTGWXiFIrnIskosxmbQptUb6NoOZr1S4s9R9bJ7+ZLZrP+ggWxtkjQzYiH50HNN0UEqc7x5SF
+0hztf383GFHAkfyUVUNElarp3U0AvnenHBe54w==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature539371-Object228383"><etsi:QualifyingProperties Target="#Signature539371"><etsi:SignedProperties Id="Signature539371-SignedProperties883950"><etsi:SignedSignatureProperties><etsi:SigningTime>2021-01-20T08:35:30-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>UoILnVDoKtMojlWnD/somIdT8aE=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUB SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A.,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1573656534</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-279998"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

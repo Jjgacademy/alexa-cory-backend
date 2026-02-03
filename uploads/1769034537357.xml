@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>3101202101099000573700120270030209212653358290011</numeroAutorizacion>
+<fechaAutorizacion>2021-02-04T03:25:03-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?><factura id="comprobante" version="1.0.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>BANCO DEL PACIFICO S.A.</razonSocial><nombreComercial>BANCO DEL PACIFICO S.A.</nombreComercial><ruc>0990005737001</ruc><claveAcceso>3101202101099000573700120270030209212653358290011</claveAcceso><codDoc>01</codDoc><estab>027</estab><ptoEmi>003</ptoEmi><secuencial>020921265</secuencial><dirMatriz>FRANCISCO DE PAULA ICAZA #200 Y PICHINCHA</dirMatriz></infoTributaria><infoFactura><fechaEmision>31/01/2021</fechaEmision><dirEstablecimiento>FCO DE PAULA ICAZA 200 Y PEDRO CARBO</dirEstablecimiento><contribuyenteEspecial>06925</contribuyenteEspecial><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionComprador>05</tipoIdentificacionComprador><razonSocialComprador>OSCAR DIAZ SANDOVAL</razonSocialComprador><identificacionComprador>1708191141</identificacionComprador><totalSinImpuestos>5.35</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>5.35</baseImponible><valor>0.65</valor></totalImpuesto><totalImpuesto><codigo>2</codigo><codigoPorcentaje>6</codigoPorcentaje><baseImponible>0.00</baseImponible><valor>0.00</valor></totalImpuesto></totalConImpuestos><propina>0.00</propina><importeTotal>6.00</importeTotal><moneda>DOLAR</moneda><pagos><pago><formaPago>20</formaPago><total>6.00</total><plazo>15</plazo><unidadTiempo>DIAS</unidadTiempo></pago></pagos></infoFactura><detalles><detalle><codigoPrincipal>10</codigoPrincipal><descripcion>Amazon Prime*1E3756AH3</descripcion><cantidad>1</cantidad><precioUnitario>0.00</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>0.00</precioTotalSinImpuesto><detallesAdicionales><detAdicional nombre="CIUDAD" valor="Amzn.com"/></detallesAdicionales><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>6</codigoPorcentaje><tarifa>0</tarifa><baseImponible>0.00</baseImponible><valor>0.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10</codigoPrincipal><descripcion>Amazon.com*RE1I95W53</descripcion><cantidad>1</cantidad><precioUnitario>0.00</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>0.00</precioTotalSinImpuesto><detallesAdicionales><detAdicional nombre="CIUDAD" valor="Amzn.com"/></detallesAdicionales><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>6</codigoPorcentaje><tarifa>0</tarifa><baseImponible>0.00</baseImponible><valor>0.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10</codigoPrincipal><descripcion>AMZN Mktp US*IO3ME2X03</descripcion><cantidad>1</cantidad><precioUnitario>0.00</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>0.00</precioTotalSinImpuesto><detallesAdicionales><detAdicional nombre="CIUDAD" valor="Amzn.com"/></detallesAdicionales><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>6</codigoPorcentaje><tarifa>0</tarifa><baseImponible>0.00</baseImponible><valor>0.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10</codigoPrincipal><descripcion>AMZN Mktp US*6909K52L3</descripcion><cantidad>1</cantidad><precioUnitario>0.00</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>0.00</precioTotalSinImpuesto><detallesAdicionales><detAdicional nombre="CIUDAD" valor="Amzn.com"/></detallesAdicionales><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>6</codigoPorcentaje><tarifa>0</tarifa><baseImponible>0.00</baseImponible><valor>0.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10</codigoPrincipal><descripcion>MILLAS PC PLATINUM</descripcion><cantidad>1</cantidad><precioUnitario>2.33</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>2.33</precioTotalSinImpuesto><detallesAdicionales><detAdicional nombre="CIUDAD" valor="GUAYAQUI"/></detallesAdicionales><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12</tarifa><baseImponible>2.33</baseImponible><valor>0.28</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10</codigoPrincipal><descripcion>PRESTACIONES PLATINUM</descripcion><cantidad>1</cantidad><precioUnitario>1.33</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>1.33</precioTotalSinImpuesto><detallesAdicionales><detAdicional nombre="CIUDAD" valor="GUAYAQUI"/></detallesAdicionales><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12</tarifa><baseImponible>1.33</baseImponible><valor>0.16</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10</codigoPrincipal><descripcion>AMZN Mktp US*DK2JY6EL3</descripcion><cantidad>1</cantidad><precioUnitario>0.00</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>0.00</precioTotalSinImpuesto><detallesAdicionales><detAdicional nombre="CIUDAD" valor="Amzn.com"/></detallesAdicionales><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>6</codigoPorcentaje><tarifa>0</tarifa><baseImponible>0.00</baseImponible><valor>0.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10</codigoPrincipal><descripcion>AMZN Mktp US*MC5AN54S3</descripcion><cantidad>1</cantidad><precioUnitario>0.00</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>0.00</precioTotalSinImpuesto><detallesAdicionales><detAdicional nombre="CIUDAD" valor="Amzn.com"/></detallesAdicionales><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>6</codigoPorcentaje><tarifa>0</tarifa><baseImponible>0.00</baseImponible><valor>0.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10</codigoPrincipal><descripcion>AMZN Mktp US*DF2TY2G83</descripcion><cantidad>1</cantidad><precioUnitario>0.00</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>0.00</precioTotalSinImpuesto><detallesAdicionales><detAdicional nombre="CIUDAD" valor="Amzn.com"/></detallesAdicionales><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>6</codigoPorcentaje><tarifa>0</tarifa><baseImponible>0.00</baseImponible><valor>0.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>31</codigoPrincipal><descripcion>N/D COMISION CONSUMO EXT I</descripcion><cantidad>1</cantidad><precioUnitario>1.69</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>1.69</precioTotalSinImpuesto><detallesAdicionales><detAdicional nombre="CIUDAD" valor="Amzn.com"/></detallesAdicionales><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12</tarifa><baseImponible>1.69</baseImponible><valor>0.21</valor></impuesto></impuestos></detalle></detalles><infoAdicional><campoAdicional nombre="Ciudad">QUITO</campoAdicional><campoAdicional nombre="Cifcod">335829</campoAdicional><campoAdicional nombre="Direccion">TRONCAL E35 S/N LOTE 2 SANGOLQUI SELVA A LEGRE</campoAdicional><campoAdicional nombre="Telefono1">2336251</campoAdicional><campoAdicional nombre="Telefono2">2336251</campoAdicional><campoAdicional nombre="Email">Oscardiasa@Hotmail.Com</campoAdicional></infoAdicional><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature288722">
+<ds:SignedInfo Id="Signature-SignedInfo9081">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID336283" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature288722-SignedProperties392426">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>AU6vEhibfPWXAvm5OYpQ0yQJhuU=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate11045796">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>UB96OQS5saf+t2nRtXTy1RayMNU=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-372692" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>y9DHLiLPTNbNn+2Ye/Nrjimi+7o=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue957612">
+mjXlJkk+WbqCydroZUeOheh1Kx91tq4h3i8qHJ0K1k818RJ9NRPif8xYPOfKI0W27MzPSm1npajV
+ADWOZBPgecFdxxOv5q1OPZNvyLCIfksrAmq+pMCjMoTQYfFfGoQH+43Ff1xqf2N8jSp83QXsBf9u
+HpcBYczq50qh6RH4c+TE/lYrqk2cZ1xdZH7ouEuzgJx3bGuFw71J5J2cbu+5Wij05p5qxQxw1e+2
+BkBkZ4My2rh6pLdb9U2fVNm27rx018+CTgb1IG6sllUVb+uoUSeiIE33kquWGHknvjmvFhSuLDZi
+NgFMQXOCtMRBy6kePZSMcoXhKBNcq7Tbk0YOeA==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate11045796">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJ6DCCB9CgAwIBAgIEW2LQJjANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTIwMDIyMTE2MDkwNloXDTIyMDIyMTE2Mzkw
+NlowgbUxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE5MBEGA1UEBRMKMDAwMDI2NTIyMjAkBgNVBAMTHVdBTFRFUiBGRVJOQU5E
+TyBCQU5DSE9OIE1VTk9aMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyfTV9C8VC3P3
+q+s3NYcsMRq3fy4y11GefVMIRTad1z7U2RrO5fxZj5E8d1EBEOWlfbhVmxAx4kLyiW4p0fvhfge/
+8WYzvlNO9M3XF8SwAtEf7O5sDikyhd4NnkXDkr/jZlbryjBUPJ3maivItfzHMNkVK5MzAeZwhu2Y
+ggwcwZBe5ib2EgnD9BAmE1fb14k+vg5EPqX3HAwxSsYEtHbknwoUNyti4Kr81kpjBEBEkZ/yhtA2
+k8seRiIGljQuw8miHY2lwvFuYBQNgj4Wu4yqjcJSrTvSEBFQ4qzuJSnFsv5cIo5UfMBIU8lwd/zU
+GvyOEYSdjavuUxIxX8sSKF+NSwIDAQABo4IFEDCCBQwwCwYDVR0PBAQDAgeAMGcGA1UdIARgMF4w
+XAYLKwYBBAGCqDsCAgEwTTBLBggrBgEFBQcCARY/aHR0cDovL3d3dy5lY2kuYmNlLmVjL3BvbGl0
+aWNhLWNlcnRpZmljYWRvL3BlcnNvbmEtanVyaWRpY2EucGRmMIGRBggrBgEFBQcBAQSBhDCBgTA+
+BggrBgEFBQcwAYYyaHR0cDovL29jc3AuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVz
+L29jc3AwPwYIKwYBBQUHMAGGM2h0dHA6Ly9vY3NwMS5lY2kuYmNlLmVjL2VqYmNhL3B1YmxpY3dl
+Yi9zdGF0dXMvb2NzcDAlBgorBgEEAYKoOwMKBBcTFUJBTkNPIERFTCBQQUNJRklDTyBTQTAdBgor
+BgEEAYKoOwMLBA8TDTA5OTAwMDU3MzcwMDEwGgYKKwYBBAGCqDsDAQQMEwowOTA3ODg3NTc0MB8G
+CisGAQQBgqg7AwIEERMPV0FMVEVSIEZFUk5BTkRPMBcGCisGAQQBgqg7AwMECRMHQkFOQ0hPTjAV
+BgorBgEEAYKoOwMEBAcTBU1VTk9aMBgGCisGAQQBgqg7AwUEChMIQ09OVEFET1IwJwYKKwYBBAGC
+qDsDBwQZExdQIElDQVpBIDIwMCBZIFBJQ0hJTkNIQTAZBgorBgEEAYKoOwMIBAsTCTA0MzczMTUw
+MDAZBgorBgEEAYKoOwMJBAsTCUd1YXlhcXVpbDAXBgorBgEEAYKoOwMMBAkTB0VDVUFET1IwIAYK
+KwYBBAGCqDsDMwQSExBTT0ZUV0FSRS1BUkNISVZPMCMGA1UdEQQcMBqBGHdiYW5jaG9uQHBhY2lm
+aWNvLmZpbi5lYzCCAd8GA1UdHwSCAdYwggHSMIIBzqCCAcqgggHGhoHVbGRhcDovL2JjZXFsZGFw
+c3VicDEuYmNlLmVjL2NuPUNSTDkzMixjbj1BQyUyMEJBTkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVD
+VUFET1IsbD1RVUlUTyxvdT1FTlRJREFEJTIwREUlMjBDRVJUSUZJQ0FDSU9OJTIwREUlMjBJTkZP
+Uk1BQ0lPTi1FQ0lCQ0Usbz1CQU5DTyUyMENFTlRSQUwlMjBERUwlMjBFQ1VBRE9SLGM9RUM/Y2Vy
+dGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlhjRodHRwOi8vd3d3LmVjaS5iY2UuZWMvQ1JML2Vj
+aV9iY2VfZWNfY3JsZmlsZWNvbWIuY3JspIG1MIGyMQswCQYDVQQGEwJFQzEiMCAGA1UEChMZQkFO
+Q08gQ0VOVFJBTCBERUwgRUNVQURPUjE3MDUGA1UECxMuRU5USURBRCBERSBDRVJUSUZJQ0FDSU9O
+IERFIElORk9STUFDSU9OLUVDSUJDRTEOMAwGA1UEBxMFUVVJVE8xJTAjBgNVBAMTHEFDIEJBTkNP
+IENFTlRSQUwgREVMIEVDVUFET1IxDzANBgNVBAMTBkNSTDkzMjArBgNVHRAEJDAigA8yMDIwMDIy
+MTE2MDkwNlqBDzIwMjIwMjIxMTYzOTA2WjAfBgNVHSMEGDAWgBRIot8jHx34LFF6jAPNSTKlCcGU
+qzAdBgNVHQ4EFgQUN+bE5ueIMJIWuwlS++f22YwM/u8wCQYDVR0TBAIwADAZBgkqhkiG9n0HQQAE
+DDAKGwRWOC4xAwIEsDANBgkqhkiG9w0BAQsFAAOCAgEAsi5lrGaR92Q+P7B5ov9oX7SjDXtGi465
+weVSpLWp/QoRkQ+1Khakxm9Bims0hFtLLHK9XMyxV48uBwXOZD+akNkDweCalxK3GMt27hdeHOJw
+ScQb++VliqMlBL+pQM8q6j0Qij3OIy6o/E+EIz0KqrhbE+EJxp/Q9f99E42NLkvjNTcxgWhBZuR5
+HZgmoi3duRVAwaGCBXxAyBfxyJMgsoX9Tg++LPQZbD8wSqm+iE+/66c3ayWYIQ31LMTxqiG+DhwJ
+tpdY3BBpHciHUxFT9FDSpJLplp1zdVwyTXHIIthlOEErJ+Czrc/QwErGLwnSz8nX3580Hlridf8I
+N2KnvGrnOQgS1Q5JObGIz7xnO2CVFEh3j98Szwcg+UCpb7FJSWt9FUONkEg27I61tDew5pDkTfXl
+zrb1ke7g55r7WnY509iRwz5P4Xb9nlCcKmnZRtHwkw1TZB2RnumDUmqxbMoRKffVIhJ+CeCcV7Jb
++icCUFjruT/vKTcwYB2DhqWGEgMXBfpmMrW9hh/HlGRyeoEvl7N0gJjXhNGP77wPwRmsoECHvN6U
+xJlZVudrHnN5cRG1dLbpx0tnxhd74XiCGPNBaNg7FxYfQT8kAIiLBP4LzML+oDVu2NOkagUI9u62
+tHs4plRRKj6ZQ5/E5hPKC/0uKE01DVc4j5L8IQrqdy4=
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+yfTV9C8VC3P3q+s3NYcsMRq3fy4y11GefVMIRTad1z7U2RrO5fxZj5E8d1EBEOWlfbhVmxAx4kLy
+iW4p0fvhfge/8WYzvlNO9M3XF8SwAtEf7O5sDikyhd4NnkXDkr/jZlbryjBUPJ3maivItfzHMNkV
+K5MzAeZwhu2YggwcwZBe5ib2EgnD9BAmE1fb14k+vg5EPqX3HAwxSsYEtHbknwoUNyti4Kr81kpj
+BEBEkZ/yhtA2k8seRiIGljQuw8miHY2lwvFuYBQNgj4Wu4yqjcJSrTvSEBFQ4qzuJSnFsv5cIo5U
+fMBIU8lwd/zUGvyOEYSdjavuUxIxX8sSKF+NSw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature288722-Object741706"><etsi:QualifyingProperties Target="#Signature288722"><etsi:SignedProperties Id="Signature288722-SignedProperties392426"><etsi:SignedSignatureProperties><etsi:SigningTime>2021-02-02T22:07:53-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>I95+6TwF3jGtgSguoLYa3m71RD0=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1533202470</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-372692"><etsi:Description>Descripcion del documento</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

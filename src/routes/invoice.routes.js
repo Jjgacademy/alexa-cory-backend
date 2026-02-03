@@ -1,26 +1,24 @@
 import { Router } from "express";
 import { authMiddleware } from "../middlewares/auth.middleware.js";
-import { verFactura } from "../controllers/invoice.controller.js";
-
 import {
-  crearFactura,
   listarFacturas,
-  resumenImpuestos,
-  dashboardFacturas,
-  clasificarFactura // <--- Agregamos esta
+  verFactura,
+  clasificarDetalle,
 } from "../controllers/invoice.controller.js";
 
 const router = Router();
 
-// Rutas actuales
-router.post("/", authMiddleware, crearFactura);
+// LISTAR
 router.get("/", authMiddleware, listarFacturas);
-router.get("/resumen", authMiddleware, resumenImpuestos);
-router.get("/dashboard", authMiddleware, dashboardFacturas);
-router.get("/:id", verFactura);
 
-// NUEVA RUTA: Para el checklist de Gastos Personales / Actividad
-// Se llamará como: PUT /api/invoices/:id/clasificar
-router.put("/:id/clasificar", authMiddleware, clasificarFactura);
+// VER FACTURA
+router.get("/:id", authMiddleware, verFactura);
+
+// CLASIFICAR DETALLE
+router.put(
+  "/detalle/:detalleId/clasificar",
+  authMiddleware,
+  clasificarDetalle
+);
 
 export default router;

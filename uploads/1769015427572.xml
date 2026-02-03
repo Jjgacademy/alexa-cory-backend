@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>0401202101179129118200120010010012392861234567815</numeroAutorizacion>
+<fechaAutorizacion>2021-01-04T05:11:47-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.1.0">
+<infoTributaria>
+<ambiente>2</ambiente>
+        <tipoEmision>1</tipoEmision>
+        <razonSocial>LAARCOM COMUNICACIONES Y SEGURIDAD CIA  LTDA</razonSocial>
+        <nombreComercial>.</nombreComercial>
+        <ruc>1791291182001</ruc>
+        <claveAcceso>0401202101179129118200120010010012392861234567815</claveAcceso>
+        <codDoc>01</codDoc>
+        <estab>001</estab>
+        <ptoEmi>001</ptoEmi>
+        <secuencial>001239286</secuencial>
+        <dirMatriz>FLORIPONDIOS N57-112 Y LEONARDO MURIALDO</dirMatriz>
+ </infoTributaria>
+  <infoFactura>
+<fechaEmision>04/01/2021</fechaEmision>
+        <dirEstablecimiento>FLORIPONDIOS N57-112 Y LEONARDO MURIALDO</dirEstablecimiento>
+        <obligadoContabilidad>SI</obligadoContabilidad>
+        <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+        <razonSocialComprador>DIAZ SANDOVAL OSCAR DIMITRI</razonSocialComprador>
+        <identificacionComprador>1708191141001</identificacionComprador>
+        <totalSinImpuestos>43.48</totalSinImpuestos>
+        <totalDescuento>0.00</totalDescuento>
+        <totalConImpuestos>
+            <totalImpuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <baseImponible>43.48</baseImponible>
+               <valor>5.22</valor>
+            </totalImpuesto>
+        </totalConImpuestos>
+        <propina>0.00</propina>
+        <importeTotal>48.70</importeTotal>
+        <moneda>DOLAR</moneda>
+        <pagos>
+            <pago>
+                <formaPago>20</formaPago>
+                <total>48.70</total>
+            </pago>
+        </pagos>
+   </infoFactura>
+    <detalles>
+<detalle>
+            <codigoPrincipal>101202001002070  </codigoPrincipal>
+            <descripcion>Servicio Seguridad Electrónica</descripcion>
+            <cantidad>1.00</cantidad>
+            <precioUnitario>43.48</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>43.48</precioTotalSinImpuesto>
+			 <detallesAdicionales>
+			 	<detAdicional nombre="detalle_adicional" valor="Enero 2021"/>
+			 </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12.00</tarifa>
+                    <baseImponible>43.48</baseImponible>
+                    <valor>5.22</valor>
+                </impuesto>
+            </impuestos>
+</detalle>
+    </detalles>
+    <infoAdicional>
+        <campoAdicional nombre="Dirección">AV. ABDON CALDERON Y RIOFRIO ESQ. SANGOLQUI</campoAdicional>
+<campoAdicional nombre="Email">anitamoyav@hotmail.com</campoAdicional>
+<campoAdicional nombre="Teléfono">2336251</campoAdicional>
+<campoAdicional nombre="Zona">2.06-UIO</campoAdicional>
+<campoAdicional nombre="Cobrador">Ninguno</campoAdicional>
+<campoAdicional nombre="Entregar a">AV. ABDON CALDERON Y RIOFRIO ESQ. SANGOLQUI</campoAdicional>
+<campoAdicional nombre="Representante">POR SU SEGURIDAD EXIGA EL RECIBO DE COBRO</campoAdicional>
+<campoAdicional nombre="Observacion 1">CANCELAR HASTA EL DIA 10 DE CADA MES, EVITE EL CORTE</campoAdicional>
+<campoAdicional nombre="Observacion 2">SERVICIO DE SEGURIDAD ELECTRONICA</campoAdicional>
+<campoAdicional nombre="Observacion 3">AV. ABDON CALDERON Y RIOFRIO ESQ. SANGOLQUI</campoAdicional>
+ <campoAdicional nombre="AGENTE DE RETENCION">Resolución Nro. NAC DNCRASC20 00000001</campoAdicional>
+    </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature1004839">
+<ds:SignedInfo Id="Signature-SignedInfo830415">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID840864" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature1004839-SignedProperties959854">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>QKYZbh86AYM7zmYx6GsYke3Stts=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1213107">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>hPDezfveo/oRiCEdNrVPi9jkTRI=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-623806" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>Gw5ZIjCYhX7gaTJadByxs3z3J0k=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue584038">
+wj6eXhnodcntHdkjg3jSFbOqAD0DzRbUcJeSsASHZL/j36OQJRhx/JEg8T4zlxZx/kkXXTmasJ3q
+LqUrXPLhTVqT+FBR4F2C3rI+01Sb2nOfmZ/ImR5gmlbH3QkXFhQfLGrJ/k5ClTuIM7RPTVjD07W0
+WDXVbgwVm8u2hgOcAOVFbgBYUEHQL2Ld/OvXBs390A6Smdv9KRS3pdqPPq7rVH5u6MGJA845wBqR
+yUAHaR0Nhnp3y/5Wj6TO6oEmrZuAs/VZ720unAK/xbV/dzDYjAbegrz5j3GP7AKQCHwvv8cd8l97
+QYLOeS7Oadp6M8CifLmmKTPcbmOpdw7mJo1xGg==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1213107">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIKCDCCB/CgAwIBAgIEW2GhEDANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE5MTExMzIwMDAzNloXDTIxMTExMzIwMzAz
+NlowgbExCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE1MBEGA1UEBRMKMDAwMDIzOTI2MTAgBgNVBAMTGUxVSVMgSE9SQUNJTyBS
+T0pBUyBWQVJHQVMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDV9DkePaKyHzmYp4hr
+CHH4PFqo17mmvOvga8uQknT7K93gy2erMvBam+RTcb1DdjtsP76205PZNkmwSH8Tdu+HktLkiLNc
+7CZ5Cdu7VU/DAXkX8xYsCPzppXO5oNa5N3GBp/3l74Y9sreJFmTdqZuOLikOtyzDWizCPOWoKxzw
+ORM+YP1bfJwNG4z8HBsC1zxKhbu/B3y2s6IoyahQGJ/tlFqJmGmKYdwduNebY0DN746lB2xG0xEt
+9YiAhYGGRr+ofqJIcQ0+P5mAPEOeVJ0Q8GkxJ18OzR+/vvcrPqum3HYPZw/JkcutKSqR08hFkkCE
+9W2Y27PbdHeujvyV7AgbAgMBAAGjggU0MIIFMDALBgNVHQ8EBAMCB4AwZwYDVR0gBGAwXjBcBgsr
+BgEEAYKoOwICATBNMEsGCCsGAQUFBwIBFj9odHRwOi8vd3d3LmVjaS5iY2UuZWMvcG9saXRpY2Et
+Y2VydGlmaWNhZG8vcGVyc29uYS1qdXJpZGljYS5wZGYwgZEGCCsGAQUFBwEBBIGEMIGBMD4GCCsG
+AQUFBzABhjJodHRwOi8vb2NzcC5lY2kuYmNlLmVjL2VqYmNhL3B1YmxpY3dlYi9zdGF0dXMvb2Nz
+cDA/BggrBgEFBQcwAYYzaHR0cDovL29jc3AxLmVjaS5iY2UuZWMvZWpiY2EvcHVibGljd2ViL3N0
+YXR1cy9vY3NwMDsGCisGAQQBgqg7AwoELRMrTEFBUkNPTSBDT01VTklDQUNJT05FUyBZIFNFR1VS
+SURBRCBDSUEgTFREQTAdBgorBgEEAYKoOwMLBA8TDTE3OTEyOTExODIwMDEwGgYKKwYBBAGCqDsD
+AQQMEwoxMjAyNDY4Mjg0MBwGCisGAQQBgqg7AwIEDhMMTFVJUyBIT1JBQ0lPMBUGCisGAQQBgqg7
+AwMEBxMFUk9KQVMwFgYKKwYBBAGCqDsDBAQIEwZWQVJHQVMwHwYKKwYBBAGCqDsDBQQREw9HRVJF
+TlRFIEdFTkVSQUwwOgYKKwYBBAGCqDsDBwQsEypNQVRJQVMgVklSR0lMIE5FIDYgNTQgWSBHT05a
+QUxPIFpBTERVTUJJREUwGQYKKwYBBAGCqDsDCAQLEwkwMjM5MzI4NTAwFQYKKwYBBAGCqDsDCQQH
+EwVRdWl0bzAXBgorBgEEAYKoOwMMBAkTB0VDVUFET1IwIAYKKwYBBAGCqDsDMwQSExBTT0ZUV0FS
+RS1BUkNISVZPMB8GA1UdEQQYMBaBFGxyb2phc0BncnVwb2xhYXIuY29tMIIB3wYDVR0fBIIB1jCC
+AdIwggHOoIIByqCCAcaGgdVsZGFwOi8vYmNlcWxkYXBzdWJwMS5iY2UuZWMvY249Q1JMODcwLGNu
+PUFDJTIwQkFOQ08lMjBDRU5UUkFMJTIwREVMJTIwRUNVQURPUixsPVFVSVRPLG91PUVOVElEQUQl
+MjBERSUyMENFUlRJRklDQUNJT04lMjBERSUyMElORk9STUFDSU9OLUVDSUJDRSxvPUJBTkNPJTIw
+Q0VOVFJBTCUyMERFTCUyMEVDVUFET1IsYz1FQz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jh
+c2WGNGh0dHA6Ly93d3cuZWNpLmJjZS5lYy9DUkwvZWNpX2JjZV9lY19jcmxmaWxlY29tYi5jcmyk
+gbUwgbIxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzElMCMGA1UEAxMcQUMgQkFOQ08gQ0VOVFJBTCBERUwgRUNVQURPUjEPMA0G
+A1UEAxMGQ1JMODcwMCsGA1UdEAQkMCKADzIwMTkxMTEzMjAwMDM2WoEPMjAyMTExMTMyMDMwMzZa
+MB8GA1UdIwQYMBaAFEii3yMfHfgsUXqMA81JMqUJwZSrMB0GA1UdDgQWBBSYkcKvMparrSEhc88z
+VX2ZazVtWDAJBgNVHRMEAjAAMBkGCSqGSIb2fQdBAAQMMAobBFY4LjEDAgSwMA0GCSqGSIb3DQEB
+CwUAA4ICAQBcK8UIzI03OTw9J/+X78a6SNazzGkBKsW4Yvem6voMVAcgsJM7oe4pdFXhEuHd5Al0
+C5zMr41GV6fuhXAwSRDcPhOE8Uc/z0FVgMe/n4z9qS/dSeF9mwKvx+baFhjXPWbeB9ecSlT/6VOx
+SUGMyD+cASNyTXpIwVeoeYIU8FGj5XFPTcSjk4pYu7oBXlvz5eDoyx95+14nhJj1mm++qgmF4GbI
+Xm2JYYF+mncNysi4Xs0SazgUToVxbKmpuTB+/y2WQ801Qq2ELyxZMFH/gqeHDZ1hymcyy8Ab6Pru
+1L+EFgY8MwfcINMuKy4oID04EO/OxZDX7a1noS4EbHBEu4IapCeBr+fGFZ1XFP4hyiyAf3GiwVm3
+sNHSsRPew6ltiTgPbMGNiX+v+aFmnnaBAATUhVmui1TbsWv7MZ2PTbsRw2Y83jfkN6/h8BXJsgd7
+4cqEFLt0VPViImk94J7GmiR4wtF/l+VuPRw+Q2mEO8T+85guY4vRElqqZlP6qHVWymGnuE2nngUQ
+BBaMtmK05iwURRyOmQJfaLjRcIQhPA/tsTfOk6qB9zIG0hkIpzeya3lYchHu4E1sFWqerFS/dcv+
+Nza+ISFdgmzIf0KVAF8A+rMbWQb9S7ZWm+sZPWz82ApWUEcUqIzT9CNK6ZkWka84bFD6GzEIkm74
+m4AfDYNRPg==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+1fQ5Hj2ish85mKeIawhx+DxaqNe5przr4GvLkJJ0+yvd4MtnqzLwWpvkU3G9Q3Y7bD++ttOT2TZJ
+sEh/E3bvh5LS5IizXOwmeQnbu1VPwwF5F/MWLAj86aVzuaDWuTdxgaf95e+GPbK3iRZk3ambji4p
+Drcsw1oswjzlqCsc8DkTPmD9W3ycDRuM/BwbAtc8SoW7vwd8trOiKMmoUBif7ZRaiZhpimHcHbjX
+m2NAze+OpQdsRtMRLfWIgIWBhka/qH6iSHENPj+ZgDxDnlSdEPBpMSdfDs0fv773Kz6rptx2D2cP
+yZHLrSkqkdPIRZJAhPVtmNuz23R3ro78lewIGw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature1004839-Object968614"><etsi:QualifyingProperties Target="#Signature1004839"><etsi:SignedProperties Id="Signature1004839-SignedProperties959854"><etsi:SignedSignatureProperties><etsi:SigningTime>2021-01-02T16:31:47-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>AsMgPFJT1QKTxLE/DhR8zfsv6q0=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1533124880</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-623806"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

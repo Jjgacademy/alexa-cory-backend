@@ -1,40 +1,74 @@
 import pool from "../config/db.js";
-import xml2js from "xml2js";
 
-/* =====================================================
+/* =========================
    LISTAR FACTURAS
-   ===================================================== */
+   ========================= */
 export const listarFacturas = async (req, res) => {
   try {
-    const result = await pool.query(`
-      SELECT *
-      FROM invoices
-      ORDER BY id DESC
-    `);
+    const userId = req.user.id;
 
-    res.json(result.rows);
+    const result = await pool.query(
+      `
+      SELECT
+        i.id,
+        i.numero,
+        i.nombre_proveedor,
+        i.ruc_proveedor,
+        i.fecha_emision,
+        i.total AS total_factura,
+        i.estado_ocr,
+        i.creado_en,
+
+        COALESCE(SUM(
+          CASE WHEN d.es_gasto_personal
+          THEN d.precio_total_sin_impuesto
+          ELSE 0 END
+        ), 0) AS total_gastos_personales,
+
+        COALESCE(SUM(
+          CASE WHEN d.es_gasto_actividad
+          THEN d.precio_total_sin_impuesto
+          ELSE 0 END
+        ), 0) AS total_gastos_actividad
+
+      FROM invoices i
+      LEFT JOIN invoice_details d ON d.invoice_id = i.id
+      WHERE i.user_id = $1
+      GROUP BY i.id
+      ORDER BY i.id DESC
+      `,
+      [userId]
+    );
+
+    res.json({
+      ok: true,
+      facturas: result.rows,
+    });
   } catch (error) {
-    console.error("ERROR listarFacturas:", error);
+    console.error("❌ Error listarFacturas:", error);
     res.status(500).json({
-      message: "Error al obtener facturas",
-      error: error.message,
+      ok: false,
+      message: "Error al listar facturas",
     });
   }
 };
 
-/* =====================================================
-   VER FACTURA POR ID (PARSEO XML)
-   ===================================================== */
+/* =========================
+   VER FACTURA (RIDE COMPLETO)
+   ========================= */
 export const verFactura = async (req, res) => {
   try {
-    const id = parseInt(req.params.id, 10);
-    if (isNaN(id)) {
-      return res.status(400).json({ message: "ID inválido" });
-    }
+    const userId = req.user.id;
+    const { id } = req.params;
 
+    /* ================= FACTURA ================= */
     const facturaRes = await pool.query(
-      "SELECT * FROM invoices WHERE id = $1",
-      [id]
+      `
+      SELECT *
+      FROM invoices
+      WHERE id = $1 AND user_id = $2
+      `,
+      [id, userId]
     );
 
     if (facturaRes.rows.length === 0) {
@@ -43,186 +77,157 @@ export const verFactura = async (req, res) => {
 
     const factura = facturaRes.rows[0];
 
-    // Si no es XML
-    if (!factura.texto_ocr || !factura.texto_ocr.trim().startsWith("<?xml")) {
-      return res.json({
-        factura,
-        proveedor: null,
-        cliente: null,
-        detalles: [],
-        totales: null,
-        informacion_adicional: [],
-      });
-    }
+    /* ================= DETALLES ================= */
+    const detallesRes = await pool.query(
+      `
+      SELECT
+        id,
+        codigo_principal,
+        cantidad,
+        descripcion,
+        precio_unitario,
+        subsidio,
+        precio_sin_subsidio,
+        descuento,
+        precio_total_sin_impuesto,
+        es_gasto_personal,
+        es_gasto_actividad,
+        tipo_gasto_personal
+      FROM invoice_details
+      WHERE invoice_id = $1
+      ORDER BY id
+      `,
+      [id]
+    );
 
-    const parser = new xml2js.Parser({ explicitArray: false });
-    const xml = await parser.parseStringPromise(factura.texto_ocr);
+    /* ================= IMPUESTOS ================= */
+    const impuestosRes = await pool.query(
+      `
+      SELECT
+        codigo,
+        codigo_porcentaje,
+        tarifa,
+        base_imponible,
+        valor
+      FROM invoice_impuestos
+      WHERE invoice_id = $1
+      ORDER BY id
+      `,
+      [id]
+    );
 
-    const infoTributaria = xml.factura?.infoTributaria || {};
-    const infoFactura = xml.factura?.infoFactura || {};
-    const detallesXML = xml.factura?.detalles?.detalle || [];
+    /* ================= PAGOS ================= */
+    const pagosRes = await pool.query(
+      `
+      SELECT
+        forma_pago,
+        total
+      FROM invoice_pagos
+      WHERE invoice_id = $1
+      ORDER BY id
+      `,
+      [id]
+    );
 
-    const proveedor = {
-      razon_social: infoTributaria.razonSocial || "",
-      nombre_comercial: infoTributaria.nombreComercial || "",
-      ruc: infoTributaria.ruc || "",
-      direccion_matriz: infoTributaria.dirMatriz || "",
-      ambiente: infoTributaria.ambiente === "2" ? "PRODUCCIÓN" : "PRUEBAS",
-      clave_acceso: infoTributaria.claveAcceso || "",
-    };
+    /* ================= INFO ADICIONAL ================= */
+    const infoAdicionalRes = await pool.query(
+      `
+      SELECT
+        nombre,
+        valor
+      FROM invoice_info_adicional
+      WHERE invoice_id = $1
+      ORDER BY id
+      `,
+      [id]
+    );
 
-    const cliente = {
-      razon_social: infoFactura.razonSocialComprador || "",
-      identificacion: infoFactura.identificacionComprador || "",
-      direccion: infoFactura.direccionComprador || "",
-      fecha_emision: infoFactura.fechaEmision || "",
-      contribuyente_especial: infoFactura.contribuyenteEspecial || "",
-      obligado_contabilidad: infoFactura.obligadoContabilidad || "",
-      placa_matricula: infoFactura.placa || "",
-    };
+    /* ================= RESPUESTA ================= */
+    res.json({
+      factura: {
+        numero: factura.numero,
+        ruc_proveedor: factura.ruc_proveedor,
+        nombre_proveedor: factura.nombre_proveedor,
+        nombre_comercial: factura.nombre_comercial,
+        dir_matriz: factura.dir_matriz,
+        obligado_contabilidad: factura.obligado_contabilidad,
+        ambiente: factura.ambiente,
+        clave_acceso: factura.clave_acceso,
 
-    const detalles = Array.isArray(detallesXML)
-      ? detallesXML.map(d => ({
-          codigo_principal: d.codigoPrincipal || "",
-          codigo_auxiliar: d.codigoAuxiliar || "",
-          cantidad: d.cantidad || "0",
-          descripcion: d.descripcion || "",
-          precio_unitario: d.precioUnitario || "0",
-          precio_sin_subsidio: d.precioSinSubsidio || "0",
-          descuento: d.descuento || "0",
-          precio_total: d.precioTotalSinImpuesto || "0",
-        }))
-      : [];
+        cliente_nombre: factura.cliente_nombre,
+        cliente_identificacion: factura.cliente_identificacion,
+        direccion_cliente: factura.direccion_cliente,
+        fecha_emision: factura.fecha_emision,
 
-    const totales = {
-      subtotal_sin_impuestos: infoFactura.totalSinImpuestos || "0",
-      total_descuento: infoFactura.totalDescuento || "0",
-      total_subsidio: infoFactura.totalSubsidio || "0",
-      propina: infoFactura.propina || "0",
-      importe_total: infoFactura.importeTotal || "0",
-      moneda: infoFactura.moneda || "USD",
-    };
+        sri_estado: factura.sri_estado,
+        sri_numero_autorizacion: factura.sri_numero_autorizacion,
+        sri_fecha_autorizacion: factura.sri_fecha_autorizacion,
+        sri_ambiente: factura.sri_ambiente,
 
-    return res.json({
-      factura,
-      proveedor,
-      cliente,
-      detalles,
-      totales,
-      informacion_adicional: [],
+        total_sin_impuestos: factura.total_sin_impuestos,
+        total_descuento: factura.total_descuento,
+        propina: factura.propina,
+        total: factura.total,
+        moneda: factura.moneda,
+      },
+
+      detalles: detallesRes.rows,
+      impuestos: impuestosRes.rows,
+      pagos: pagosRes.rows,
+      informacion_adicional: infoAdicionalRes.rows,
     });
-
   } catch (error) {
-    console.error("ERROR verFactura:", error);
+    console.error("❌ Error verFactura:", error);
     res.status(500).json({
-      message: "Error al obtener la factura",
-      error: error.message,
+      message: "Error al obtener factura",
     });
   }
 };
 
-/* =====================================================
-   CREAR FACTURA (MANUAL)
-   ===================================================== */
-export const crearFactura = async (req, res) => {
+/* =========================
+   CLASIFICAR DETALLE
+   ========================= */
+export const clasificarDetalle = async (req, res) => {
   try {
     const userId = req.user.id;
-    const {
-      numero,
-      ruc_proveedor,
-      nombre_proveedor,
-      fecha_emision,
-      total,
-      categoria,
-    } = req.body;
+    const { detalleId } = req.params;
+    const { tipo, subtipo } = req.body;
 
-    const result = await pool.query(
-      `INSERT INTO invoices (
-        user_id, numero, ruc_proveedor, nombre_proveedor,
-        fecha_emision, total, categoria
-      )
-      VALUES ($1,$2,$3,$4,$5,$6,$7)
-      RETURNING *`,
+    const check = await pool.query(
+      `
+      SELECT d.id
+      FROM invoice_details d
+      JOIN invoices i ON i.id = d.invoice_id
+      WHERE d.id = $1 AND i.user_id = $2
+      `,
+      [detalleId, userId]
+    );
+
+    if (!check.rows.length) {
+      return res.status(404).json({ message: "Detalle no encontrado" });
+    }
+
+    await pool.query(
+      `
+      UPDATE invoice_details
+      SET
+        es_gasto_personal = $1,
+        es_gasto_actividad = $2,
+        tipo_gasto_personal = $3
+      WHERE id = $4
+      `,
       [
-        userId,
-        numero,
-        ruc_proveedor,
-        nombre_proveedor,
-        fecha_emision,
-        total,
-        categoria || "SIN CLASIFICAR",
+        tipo === "PERSONAL",
+        tipo === "ACTIVIDAD",
+        subtipo || null,
+        detalleId
       ]
     );
 
-    res.status(201).json(result.rows[0]);
+    res.json({ ok: true });
   } catch (error) {
-    console.error("ERROR crearFactura:", error);
-    res.status(500).json({
-      message: "Error al crear factura",
-      error: error.message,
-    });
+    console.error("Error clasificarDetalle:", error);
+    res.status(500).json({ message: "Error al clasificar detalle" });
   }
 };
 
-/* =====================================================
-   RESUMEN IMPUESTOS
-   ===================================================== */
-export const resumenImpuestos = async (req, res) => {
-  try {
-    const result = await pool.query(`
-      SELECT SUM(total) AS total_facturado
-      FROM invoices
-    `);
-
-    res.json(result.rows[0]);
-  } catch (error) {
-    console.error("ERROR resumenImpuestos:", error);
-    res.status(500).json({
-      message: "Error en resumen",
-      error: error.message,
-    });
-  }
-};
-
-/* =====================================================
-   DASHBOARD
-   ===================================================== */
-export const dashboardFacturas = async (req, res) => {
-  try {
-    const result = await pool.query(`
-      SELECT COUNT(*) AS total_facturas
-      FROM invoices
-    `);
-
-    res.json({ resumen: result.rows[0] });
-  } catch (error) {
-    console.error("ERROR dashboardFacturas:", error);
-    res.status(500).json({
-      message: "Error en dashboard",
-      error: error.message,
-    });
-  }
-};
-
-/* =====================================================
-   CLASIFICAR FACTURA
-   ===================================================== */
-export const clasificarFactura = async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { categoria } = req.body;
-
-    await pool.query(
-      "UPDATE invoices SET categoria = $1 WHERE id = $2",
-      [categoria, id]
-    );
-
-    res.json({ message: "Categoría actualizada" });
-  } catch (error) {
-    console.error("ERROR clasificarFactura:", error);
-    res.status(500).json({
-      message: "Error al clasificar",
-      error: error.message,
-    });
-  }
-};
