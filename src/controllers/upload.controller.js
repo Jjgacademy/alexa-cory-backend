@@ -68,6 +68,24 @@ const parseDate = (v) => {
   return null;
 };
 
+
+export const procesarNotaVenta = async (req, res) => {
+  try {
+    const texto = await leerFactura(req.file.path);
+    const parsed = analizarTextoFactura(texto);
+
+    console.log("========== PARSED ==========");
+    console.log(parsed);
+
+    // 🔥 ESTA LINEA ES LA IMPORTANTE
+    res.json(parsed);
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Error OCR" });
+  }
+};
+
 /* =========================
    CONTROLLER
 ========================= */
@@ -305,6 +323,10 @@ export const procesarFactura = async (req, res) => {
     ===================================================== */
     const texto = await leerFactura(filePath);
     const analisis = analizarTextoFactura(texto);
+
+    if (!analisis || !analisis.proveedor) {
+      throw new Error("OCR no devolvió datos válidos");
+    }
 
     // fecha_emision nunca null (tu tabla lo exige)
     const fechaEmisionOCR = analisis?.proveedor?.fecha
