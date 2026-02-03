@@ -14,7 +14,6 @@ const client = new vision.ImageAnnotatorClient();
 // LECTURA OCR (VISION API)
 // ===========================
 export const leerFactura = async (filePath) => {
-  // PDF → leer texto directo
   if (filePath.toLowerCase().endsWith(".pdf")) {
     const buffer = fs.readFileSync(filePath);
     const data = await pdf(buffer);
@@ -25,11 +24,8 @@ export const leerFactura = async (filePath) => {
     return textoPdf;
   }
 
-  // Imagen → Google Vision
   const [result] = await client.textDetection(filePath);
-  const detections = result.textAnnotations;
-
-  const texto = detections?.[0]?.description || "";
+  const texto = result.textAnnotations?.[0]?.description || "";
 
   console.log("========== OCR TEXTO ==========");
   console.log(texto);
@@ -39,185 +35,291 @@ export const leerFactura = async (filePath) => {
 };
 
 // ===========================
-// HELPERS SEGUROS
+// HELPERS
 // ===========================
-const safeTrim = (v) => (typeof v === "string" ? v.trim() : "");
-const limpiarEspacios = (t) => safeTrim((t || "").replace(/\s+/g, " "));
-
-/**
- * buscarMatch:
- * - Acepta regex con o sin grupos
- * - Si hay grupo 1, devuelve grupo 1
- * - Si NO hay grupo 1, devuelve el match completo
- * - Si no match, null
- */
-const buscarMatch = (texto, regex) => {
-  const m = (texto || "").match(regex);
-  if (!m) return null;
-
-  // Si hay grupo capturado
-  if (m[1] !== undefined && m[1] !== null && `${m[1]}` !== "") {
-    return limpiarEspacios(String(m[1]));
-  }
-
-  // Si no hay grupo, devuelve el match completo
-  return limpiarEspacios(String(m[0]));
-};
-
+const limpiar = (t) => (t || "").replace(/\s+/g, " ").trim();
 const soloDigitos = (s) => (s || "").replace(/[^\d]/g, "");
 
+const normalizarMayus = (s) =>
+  (s || "")
+    .toUpperCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, ""); // quita tildes
+
+// busca match por regex y retorna grupo 1 si existe, sino match completo
+const match1 = (txt, re) => {
+  const m = (txt || "").match(re);
+  if (!m) return "";
+  return limpiar(m[1] ?? m[0] ?? "");
+};
+
 /**
- * Convierte fechas OCR a YYYY-MM-DD.
+ * Convierte fechas OCR a YYYY-MM-DD
  * Soporta:
- *  - 16-01-2026
- *  - 16/01/2026
- *  - 20/10/2025
- *  - "30/ABRIL/2025" (meses en español)
+ * - 20/10/2025
+ * - 20-10-2025
+ * - 30/ABRIL/2025
+ * - 30-ABRIL-2025
  */
-const parseFechaOCR = (raw) => {
-  if (!raw) return null;
+const parseFecha = (txt) => {
+  if (!txt) return "";
 
-  const txt = limpiarEspacios(raw).toUpperCase();
+  const t = normalizarMayus(txt);
 
-  // 1) dd-mm-yyyy / dd/mm/yyyy / dd.mm.yyyy
-  let m = txt.match(/(\d{2})[\/\-.](\d{2})[\/\-.](\d{4})/);
-  if (m) return `${m[3]}-${m[2]}-${m[1]}`;
-
-  // 2) dd/MES/yyyy (MES en español)
-  m = txt.match(/(\d{1,2})[\/\-.]([A-ZÁÉÍÓÚÑ]+)[\/\-.](\d{4})/);
+  // dd/mm/yyyy o dd-mm-yyyy o dd.mm.yyyy
+  let m = t.match(/(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4})/);
   if (m) {
     const dd = String(m[1]).padStart(2, "0");
-    const mes = m[2]
-      .replace("Á", "A")
-      .replace("É", "E")
-      .replace("Í", "I")
-      .replace("Ó", "O")
-      .replace("Ú", "U");
-
-    const map = {
-      ENERO: "01",
-      FEBRERO: "02",
-      MARZO: "03",
-      ABRIL: "04",
-      MAYO: "05",
-      JUNIO: "06",
-      JULIO: "07",
-      AGOSTO: "08",
-      SEPTIEMBRE: "09",
-      SETIEMBRE: "09",
-      OCTUBRE: "10",
-      NOVIEMBRE: "11",
-      DICIEMBRE: "12",
-    };
-
-    const mm = map[mes] || null;
-    if (mm) return `${m[3]}-${mm}-${dd}`;
+    const mm = String(m[2]).padStart(2, "0");
+    return `${m[3]}-${mm}-${dd}`;
   }
 
-  // 3) Si viene algo raro tipo "14.0, 2026." → no inventar
-  return null;
+  // dd/MES/yyyy
+  m = t.match(/(\d{1,2})[\/\-.]([A-ZÑ]+)[\/\-.](\d{4})/);
+  if (!m) return "";
+
+  const meses = {
+    ENERO: "01",
+    FEBRERO: "02",
+    MARZO: "03",
+    ABRIL: "04",
+    MAYO: "05",
+    JUNIO: "06",
+    JULIO: "07",
+    AGOSTO: "08",
+    SEPTIEMBRE: "09",
+    SETIEMBRE: "09",
+    OCTUBRE: "10",
+    NOVIEMBRE: "11",
+    DICIEMBRE: "12",
+  };
+
+  const mes = meses[m[2]];
+  if (!mes) return "";
+
+  const dd = String(m[1]).padStart(2, "0");
+  return `${m[3]}-${mes}-${dd}`;
 };
 
 // ===========================
 // PARSER NOTA DE VENTA
 // ===========================
 export const analizarTextoFactura = (texto) => {
+  const lineasRaw = (texto || "")
+    .replace(/\r/g, "")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean);
 
-  const limpio = texto.replace(/\r/g, "");
-  const lineas = limpio.split("\n").map(l => l.trim()).filter(Boolean);
-  const todo = lineas.join(" ");
+  // línea limpia (colapsa espacios)
+  const lineas = lineasRaw.map(limpiar);
 
-  /* ======================
-     PROVEEDOR
-  ====================== */
+  // texto completo
+  const todo = limpiar(lineas.join(" "));
 
-  const nombre = lineas[0] || "";
+  // ======================
+  // EXTRAER RUC PROVEEDOR (robusto)
+  // ======================
+  // Prioridad: "R.U.C." / "RUC" / "R. U. C." + 13 dígitos (Ecuador)
+  const rucProveedor =
+    match1(todo, /\bR\.?\s*U\.?\s*C\.?\s*[:#]?\s*([0-9]{10,13})\b/i) ||
+    match1(todo, /\bRUC\s*[:#]?\s*([0-9]{10,13})\b/i);
 
-  const direccion = (todo.match(/Direcci[oó]n[:\s]*(.+?)(Cel|RUC|CONTRIBUYENTE)/i)?.[1] || "").trim();
-
-  const celular = (todo.match(/Cel[:.\s]*([0-9\s]+)/i)?.[1] || "").replace(/\s/g, "");
-
-  const ciudad = (todo.match(/Quito.*Ecuador/i)?.[0] || "");
-
-  const ruc = (todo.match(/R\.?U\.?C\.?\s*([0-9]{10,13})/i)?.[1] || "");
-
-  const contribuyente = (todo.match(/CONTRIBUYENTE.*RIMPE/i)?.[0] || "");
-
-  /* ======================
-     FECHA EMISIÓN
-  ====================== */
-
-  let fecha = "";
-  const fechaMatch = todo.match(/(\d{2})[\/\-](\d{2})[\/\-](\d{4})/);
-
-  if (fechaMatch) {
-    fecha = `${fechaMatch[3]}-${fechaMatch[2]}-${fechaMatch[1]}`;
+  // ======================
+  // NOMBRE PROVEEDOR (no mezclar con RUC)
+  // ======================
+  // Caso típico: "MARIANA ... R.U.C. 170..."
+  // Si la primera línea trae "RUC" o "R.U.C", se corta antes de eso.
+  let nombre = lineas[0] || "";
+  if (/R\.?\s*U\.?\s*C\.?/i.test(nombre) || /\bRUC\b/i.test(nombre)) {
+    nombre = limpiar(
+      nombre
+        .replace(/\bR\.?\s*U\.?\s*C\.?.*$/i, "") // corta desde RUC
+        .replace(/\bRUC\b.*$/i, "")
+    );
   }
 
-  /* ======================
-     NOTA / FACTURA
-  ====================== */
+  // Si por OCR el nombre viene con el ruc pegado sin "RUC"
+  // ejemplo: "MARIANA ... 1704587052001"
+  // y ese número coincide con el RUC detectado, lo retiramos.
+  if (rucProveedor && nombre.includes(rucProveedor)) {
+    nombre = limpiar(nombre.replace(rucProveedor, ""));
+  }
 
-  const notaVenta = (todo.match(/(\d{3}-\d{3}-\d{2})/)?.[1] || "");
-  const factura = (todo.match(/\b\d{5,9}\b/)?.[0] || "");
+  // fallback: si la primera línea queda vacía, intenta antes de "VENTA" o "NOTA"
+  if (!nombre) {
+    nombre =
+      limpiar(match1(todo, /^(.+?)\b(NOTA\s+DE\s+VENTA|FACTURA|VENTA\s+DE)\b/i)) ||
+      (lineas[0] || "");
+  }
 
-  const autorizacion = (todo.match(/Autorizaci[oó]n.*?([0-9]{6,})/i)?.[1] || "");
+  // ======================
+  // DIRECCION / CEL / CIUDAD
+  // ======================
+  const direccion = limpiar(
+    match1(todo, /Direcci[oó]n\s*:?\s*(.+?)(\bCel\b|TELF|TEL|R\.?\s*U\.?\s*C|RUC|NOTA\s+DE\s+VENTA)/i)
+  );
 
-  /* ======================
-     DETALLE AUTOMÁTICO
-  ====================== */
+  const celular = soloDigitos(
+    match1(todo, /\b(Cel\.?|Celular)\s*:?\s*([0-9][0-9\s\-]{6,})/i)
+  );
+
+  // ciudad: intenta "Quito - Ecuador" o "Quito Ecuador" o "... - Ecuador"
+  const ciudad =
+    limpiar(match1(todo, /([A-ZÁÉÍÓÚÑa-záéíóúñ]+)\s*[-–]\s*Ecuador/i)) ||
+    limpiar(match1(todo, /(Quito\s*[-–]?\s*Ecuador)/i)) ||
+    limpiar(match1(todo, /([A-ZÁÉÍÓÚÑa-záéíóúñ]+)\s+Ecuador/i));
+
+  const contribuyente = lineas.find((l) => /CONTRIBUYENTE/i.test(l)) || "";
+
+  // ======================
+  // NOTA DE VENTA / NUMERO
+  // ======================
+  // nota de venta suele ser: 001-001-000005909 o 001-001-00 0002974 (OCR raro)
+  // 1) intenta serie completa
+  let notaVenta =
+    match1(todo, /\b(\d{3}-\d{3}-\d{1,9})\b/) ||
+    match1(todo, /\b(\d{3}\s*-\s*\d{3}\s*-\s*\d{1,9})\b/).replace(/\s+/g, "");
+
+  // 2) si no hay serie, intenta capturar "NOTA DE VENTA" + secuencial
+  if (!notaVenta) {
+    const sec = match1(todo, /NOTA\s+DE\s+VENTA\s*[^\d]{0,10}(\d{4,9})/i);
+    if (sec) notaVenta = sec;
+  }
+
+  // "factura" como secuencial aislado (fallback)
+  const factura = match1(todo, /\b(\d{4,9})\b/);
+
+  // ======================
+  // AUTORIZACION SRI (número)
+  // ======================
+  const autorizacion =
+    match1(todo, /Autorizaci[oó]n\s*(?:S\.?R\.?I\.?)?\s*[:#Nº°]*\s*([0-9]{6,})/i) ||
+    match1(todo, /\bAUT\.\s*SRI\s*N[º°]?\s*([0-9]{6,})/i);
+
+  // ======================
+  // FECHA (la correcta: FECHA AUTORIZACIÓN / Fecha Aut. S.R.I.)
+  // ======================
+  // Prioridad: fecha de autorización SRI
+  const fechaAutRaw =
+    match1(todo, /FECHA\s+AUT(?:ORIZACI[OÓ]N)?\s*[:\-]?\s*([0-9]{1,2}[\/\-.][0-9A-ZÁÉÍÓÚÑ]{1,10}[\/\-.][0-9]{4})/i) ||
+    match1(todo, /Fecha\s+Aut\.?\s*S\.?R\.?I\.?\s*[:\-]?\s*([0-9]{1,2}[\/\-.][0-9A-ZÁÉÍÓÚÑ]{1,10}[\/\-.][0-9]{4})/i);
+
+  const fecha = parseFecha(fechaAutRaw); // <- esta es la que debe ir al input date
+
+  // ======================
+  // DETALLE (mejorado)
+  // ======================
+  // Estrategia:
+  // 1) detecta la sección desde "CANT" hasta antes de "TOTAL" o "FORMA"
+  // 2) parsea líneas que comiencen con cantidad
+  // 3) si viene todo en una sola línea, intenta extraer patrones qty + desc
 
   const items = [];
 
-  for (const l of lineas) {
+  const idxCant = lineas.findIndex((l) => /\bCANT\b/i.test(l));
+  const idxDesc = lineas.findIndex((l) => /DESCRIPC/i.test(l));
+  const idxInicio = idxCant >= 0 ? idxCant : idxDesc;
 
-    if (/^\d+\s+/.test(l)) {
-      const m = l.match(/^(\d+)\s+(.+)/);
+  let idxFin = -1;
+  if (idxInicio >= 0) {
+    idxFin = lineas.findIndex((l, i) => i > idxInicio && /(TOTAL\s*\$?|FORMA\s+Y\s+VALOR|EFECTIVO:|TARJETA|OTROS:)/i.test(l));
+    if (idxFin < 0) idxFin = lineas.length;
+  }
 
-      if (m) {
+  const bloqueDetalle =
+    idxInicio >= 0 ? lineas.slice(idxInicio, idxFin).filter(Boolean) : [];
+
+  // quitar encabezados típicos
+  const bloqueFiltrado = bloqueDetalle.filter(
+    (l) =>
+      !/\bCANT\b/i.test(l) &&
+      !/DESCRIPC/i.test(l) &&
+      !/V\.\s*UNIT/i.test(l) &&
+      !/V\.\s*TOTAL/i.test(l)
+  );
+
+  // Caso A: líneas tipo "1 Dispensador de 5 Galones"
+  for (const l of bloqueFiltrado) {
+    const m = l.match(/^(\d{1,3})\s+(.+)$/);
+    if (m) {
+      const cantidad = m[1];
+      let descripcion = limpiar(m[2]);
+
+      // si descripción es muy corta o basura OCR, ignora
+      if (descripcion.length < 2) continue;
+
+      items.push({
+        cantidad,
+        descripcion,
+        unitario: "",
+        total: "",
+      });
+    }
+  }
+
+  // Caso B: si no detectó nada, intenta extraer por patrón en TODO el texto:
+  // "1/2 Galón" no sirve como cantidad (por eso solo cantidades enteras al inicio)
+  if (items.length === 0) {
+    // intenta recuperar por líneas que contengan productos comunes (heurística)
+    // y números de cantidad en otra línea cercana (muy variable). Aquí solo lo básico:
+    for (const l of bloqueFiltrado) {
+      // desc sin cantidad, pero parece item
+      if (l.length > 4 && !/\b(TELF|RUC|AUT|SRI|CLIENTE|DIRECCION|ECUADOR)\b/i.test(l)) {
+        // si contiene palabras y no es encabezado, lo toma como ítem sin cantidad
+        // (para que al menos aparezca)
         items.push({
-          cantidad: m[1],
-          descripcion: m[2],
+          cantidad: "",
+          descripcion: l,
           unitario: "",
           total: "",
         });
       }
     }
+
+    // si metió demasiada basura, limpia: deja solo descripciones razonables
+    const depurado = items.filter((it) => limpiar(it.descripcion).length >= 5);
+    items.length = 0;
+    items.push(...depurado.slice(0, 30));
   }
 
-  /* ======================
-     TOTAL
-  ====================== */
+  // ======================
+  // TOTAL
+  // ======================
+  const total =
+    match1(todo, /TOTAL\s*\$?\s*([0-9][0-9.,]*)/i).replace(",", ".") || "0.00";
 
-  const totalMatch = todo.match(/TOTAL\s*\$?\s*([0-9.,]+)/i);
-  const total = totalMatch ? totalMatch[1].replace(",", ".") : "0.00";
-
-  /* ======================
-     FORMA DE PAGO
-  ====================== */
-
+  // ======================
+  // FORMA DE PAGO
+  // ======================
   const formaPago = {
-    efectivo: /efectivo/i.test(todo),
-    tarjeta: /tarjeta/i.test(todo),
-    electronico: /electr[oó]nico/i.test(todo),
-    otros: /otros/i.test(todo),
+    efectivo: /EFECTIVO/i.test(todo),
+    tarjeta: /TARJETA/i.test(todo),
+    electronico: /ELECTR[oó]NICO/i.test(todo),
+    otros: /\bOTROS\b/i.test(todo),
   };
 
-  return {
+  const parsed = {
     proveedor: {
       nombre,
       direccion,
       celular,
       ciudad,
-      ruc,
+      ruc: rucProveedor,
       contribuyente,
       notaVenta,
       factura,
       autorizacion,
-      fecha,
+      fecha, // <- fecha autorización SRI en YYYY-MM-DD
     },
     items,
     total,
     formaPago,
   };
+
+  console.log("========== PARSED ==========");
+  console.log(parsed);
+  console.log("============================");
+
+  return parsed;
 };
