@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>1201202101179246749700120018010000213131234567816</numeroAutorizacion>
+<fechaAutorizacion>2021-01-12T14:06:24-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>PROINSOLQUIP PROVEEDOR INDUSTRIAL DE SOLDADURA Y EQUIPOS CIA</razonSocial>
+    <nombreComercial>PROINSOLQUIP PROVEEDOR INDUSTRIA</nombreComercial>
+    <ruc>1792467497001</ruc>
+    <claveAcceso>1201202101179246749700120018010000213131234567816</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>801</ptoEmi>
+    <secuencial>000021313</secuencial>
+    <dirMatriz>Sangolqui, Av. Los Shyris Lote 86 y Altar. La Palma</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>12/01/2021</fechaEmision>
+    <dirEstablecimiento>Sangolqui, Av. Los Shyris Lote 86 y Altar. La Palma</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>OSCAR DIMITRI DIAZ SANDOVAL</razonSocialComprador>
+    <identificacionComprador>1708191141001</identificacionComprador>
+    <direccionComprador>SANGOLQUI</direccionComprador>
+    <totalSinImpuestos>101.79</totalSinImpuestos>
+    <totalDescuento>0</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <baseImponible>101.79</baseImponible>
+        <valor>12.21</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0</propina>
+    <importeTotal>114</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>01</formaPago>
+        <total>114</total>
+        <plazo>30</plazo>
+        <unidadTiempo>Dias</unidadTiempo>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>559</codigoPrincipal>
+      <codigoAuxiliar>3031</codigoAuxiliar>
+      <descripcion>ELECTRODO INFRA 4043*1/8 ALUMINIO KILO</descripcion>
+      <cantidad>3</cantidad>
+      <precioUnitario>33.928571</precioUnitario>
+      <descuento>0</descuento>
+      <precioTotalSinImpuesto>101.79</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>101.79</baseImponible>
+          <valor>12.21</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Vendedor ">Vendedor</campoAdicional>
+    <campoAdicional nombre="Correo ">anitamoyav@hotmail.com</campoAdicional>
+    <campoAdicional nombre="Ciudad ">Quito</campoAdicional>
+    <campoAdicional nombre="Observación ">Venta</campoAdicional>
+    <campoAdicional nombre="Agente de Retención">No.Resolución:1</campoAdicional>
+  </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature156447">
+<ds:SignedInfo Id="Signature-SignedInfo465688">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID273282" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature156447-SignedProperties227877">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>Dp+V5VoYyMKp0XzfRPoIo5u+58s=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1689127">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>9r6XTCR6sG89PezjqTKQGfli1Lo=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-754539" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>BEfpfL940cglAOmVZGoCECoSKko=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue933553">
+c7vAiPQiUFGe6Nnb8Y1gUlYdPY9k7S0wrFJp91TQ02nkC+14kfLYkWOpzbaIXiNVZFdxFHIwb1Ha
+35VUE2+yZTRr8sKgTQUAMP5JmnEo3eF5psbkGhmMIsLiU0vl9Evf2NAZX51gX45xdYr2X7egFYEz
+/VGhaJxI8UhXhYwGVp5hkoagV8P0zw69pjLs0it6VT0dIbNQ2M23ft8+vscz+XWcCSctXpgmScOT
+91goKNcs5ReNdAjEzyXC+e1rU42qJ5Zoyl5J9SEMlzbd7yp2KiLIcGFpvesgjr7r7DqKHFy0IFIA
+Cl4atp1eqOTq+XXDIWH7DKi8D/1zISoE9PUXlQ==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1689127">
+<ds:X509Data>
+<ds:X509Certificate>
+MIILfTCCCWWgAwIBAgIETCvUdTANBgkqhkiG9w0BAQsFADCBmTELMAkGA1UEBhMCRUMxHTAbBgNV
+BAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAxMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJ
+T04gREUgSU5GT1JNQUNJT04xOTA3BgNVBAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNV
+QkNBLTEgU0VDVVJJVFkgREFUQTAeFw0yMDExMjMyMjA3NDBaFw0yMjExMjMyMjA3NDBaMIGdMQsw
+CQYDVQQGEwJFQzEdMBsGA1UECgwUU0VDVVJJVFkgREFUQSBTLkEuIDExMDAuBgNVBAsMJ0VOVElE
+QUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTjEVMBMGA1UEBRMMMjMxMTIwMTcxNzM4
+MSYwJAYDVQQDDB1NQVJJQSBERUwgQ0FSTUVOIENBSVpBIExMVUdTQTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAKdN8HokNu5OaNnpTOsCkHWdprcx4l6lGvKLelfKkkM3f0DPb6xaEa3Q
+oVkmZ1qEZ5RrhW1tzmfQMFP6zlZY8nyxPmrFa0xKsH1E4iLWSPiHi6dh1ACtpCN2iZ35oJjGmMS2
+KSAz/fuUahuZrblk8D2C0kJoK1D36oHErGXtF4hvxj6QzRY6QCMRbwHnMtl8YvJNxBszXXe8nEuf
+csnj+c9NTFV/pNyw9SWjMOJMls+9BbRcC6nS/aY2wsgg/jUa076G61SjIrXcfHAl5M6j9xDc5Qjx
+PVCJ8kgr6UZrZZhq3emib1LU55Z9gawRhT9zAm6eqHqhgljAtvhGxNQNLzMCAwEAAaOCBsUwggbB
+MFkGCCsGAQUFBwEBBE0wSzBJBggrBgEFBQcwAYY9aHR0cDovL29jc3Bndy5zZWN1cml0eWRhdGEu
+bmV0LmVjL2VqYmNhL3B1YmxpY3dlYi9zdGF0dXMvb2NzcDAdBgNVHQ4EFgQU3Ly6l811rDe/qBS8
+ZmyiyxGV7OUwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBRcD4WkdBD8rQEsGgA9kxcJ+jkB1jAr
+BgNVHRAEJDAigA8yMDIwMTEyMzIyMDc0MFqBDzIwMjIxMTIzMjIwNzQwWjCBzAYDVR0uBIHEMIHB
+MIG+oIG7oIG4hoG1bGRhcDovL2xkYXBzZC5zZWN1cml0eWRhdGEubmV0LmVjL0NOPUFVVE9SSURB
+RCBERSBDRVJUSUZJQ0FDSU9OIFNVQkNBLTEgU0VDVVJJVFkgREFUQSxPVT1FTlRJREFEIERFIENF
+UlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04sTz1TRUNVUklUWSBEQVRBIFMuQS4gMSxDPUVDP2Rl
+bHRhUmV2b2NhdGlvbkxpc3Q/YmFzZTBtBgNVHSAEZjBkMGIGCisGAQQBgqZyAgkwVDBSBggrBgEF
+BQcCAjBGHkQAQwBlAHIAdABpAGYAaQBjAGEAZABvACAAZABlACAAUgBlAHAAcgBlAHMAZQBuAHQA
+YQBuAHQAZQAgAEwAZQBnAGEAbDCCAp4GA1UdHwSCApUwggKRMIHloEGgP4Y9aHR0cDovL29jc3Bn
+dy5zZWN1cml0eWRhdGEubmV0LmVjL2VqYmNhL3B1YmxpY3dlYi9zdGF0dXMvb2NzcKKBn6SBnDCB
+mTE5MDcGA1UEAwwwQVVUT1JJREFEIERFIENFUlRJRklDQUNJT04gU1VCQ0EtMSBTRUNVUklUWSBE
+QVRBMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04xHTAb
+BgNVBAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAxMQswCQYDVQQGEwJFQzCBxKCBwaCBvoaBu2xkYXA6
+Ly9sZGFwc2Quc2VjdXJpdHlkYXRhLm5ldC5lYy9DTj1BVVRPUklEQUQgREUgQ0VSVElGSUNBQ0lP
+TiBTVUJDQS0xIFNFQ1VSSVRZIERBVEEsT1U9RU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElO
+Rk9STUFDSU9OLE89U0VDVVJJVFkgREFUQSBTLkEuIDEsQz1FQz9jZXJ0aWZpY2F0ZVJldm9jYXRp
+b25MaXN0P2Jhc2Uwgd+ggdyggdmGgdZodHRwczovL3BvcnRhbC1vcGVyYWRvci5zZWN1cml0eWRh
+dGEubmV0LmVjL2VqYmNhL3B1YmxpY3dlYi93ZWJkaXN0L2NlcnRkaXN0P2NtZD1jcmwmaXNzdWVy
+PUNOPUFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNVQkNBLTEgU0VDVVJJVFkgREFUQSxPVT1F
+TlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04sTz1TRUNVUklUWSBEQVRBIFMu
+QS4gMSxDPUVDMAsGA1UdDwQEAwIF4DAeBgNVHREEFzAVgRNzb2xxdWlwQGhvdG1haWwuY29tMBoG
+CisGAQQBgqZyAwEEDAwKMTgwMzIyNTc5NDAgBgorBgEEAYKmcgMCBBIMEE1BUklBIERFTCBDQVJN
+RU4wFQYKKwYBBAGCpnIDAwQHDAVDQUlaQTAWBgorBgEEAYKmcgMEBAgMBkxMVUdTQTAfBgorBgEE
+AYKmcgMFBBEMD0dFUkVOVEUgR0VORVJBTDAqBgorBgEEAYKmcgMHBBwMGkxPUyBTSFlSSVMgTE9U
+RSA4NiBZIEFMVEFSMBwGCisGAQQBgqZyAwgEDgwMNTkzOTkzNDY3NTAwMBoGCisGAQQBgqZyAwkE
+DAwKUlVNSU5JQUhVSTBTBgorBgEEAYKmcgMKBEUMQ1BST0lOU09MUVVJUCBQUk9WRUVET1IgSU5E
+VVNUUklBTCBERSBTT0xEQURVUkEgWSBFUVVJUE9TIENJQS4gTFREQS4wHQYKKwYBBAGCpnIDCwQP
+DA0xNzkyNDY3NDk3MDAxMBcGCisGAQQBgqZyAwwECQwHRUNVQURPUjASBgorBgEEAYKmcgMdBAQM
+Ak5vMB8GCisGAQQBgqZyAyAEEQwPMDAyMDAxMDAwMTE3MjAxMBMGCisGAQQBgqZyAyEEBQwDUEZY
+MBEGCisGAQQBgqZyAyIEAwwBLjANBgkqhkiG9w0BAQsFAAOCAgEAaCiCGFXRywpxifncMO5rgesM
+zUcH+F/8V5cOOawOOSwyWIC4BM95wXz+RrNOqb3ARu7HP9Ox7ZsDm4RQ9ooqB/VNaW2/rARWIpT9
+uSPT+uG6tEexI7f0+OSY5pbSzUTWpk7Heb2WslX2ezWm4tMX8rnqv8BnEstvAUzPhwmaWSXl3G6d
+YfPgF1UmYvSba/NQACgZFPpXNtaHRw4zpQy7ifCPVEzUjTT8p0z1oMneW+KQ3bjenqGmS/wTnhjN
+WUjbGJ3Y91HCYLf74icol4mK79H9x2Gl3GUZBvYBGBVs5Ft8LPZCKMUXhfhDV6Gwnumvjy/zENoo
+GbPRVqxDsnCgogFkG6TJ9VUwIZ6sEaCpqC4BJhgGVDYUKv9bYrdZux36HnbjiKbjIwmMMp7X//wy
+TMmioxrnFDwToEnDAQMI/QWC2FLq7/NysNyNUcS5bRXMTZ4ZEe9BBEASeUnnBp6NR5auVCoJFSjL
+/z0pbA7SA6z/604WLPxOhj+QNMEAseNgpVnOQm36DhhVvLX4MrRFuCd1e1ERcpmv7zJeaGNoaRaA
+d892eObzV577dO1l7oXUSgJL10MpnZlWMQdIQuZk0UkkFl3mDa+D0UCDbmOnaO01am8G4brIHb4A
+2MfngIHb9f/Lqn6ZxEFuenbY7hYTBxbEWr9AZdqd5aFSgvRdeik=
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+p03weiQ27k5o2elM6wKQdZ2mtzHiXqUa8ot6V8qSQzd/QM9vrFoRrdChWSZnWoRnlGuFbW3OZ9Aw
+U/rOVljyfLE+asVrTEqwfUTiItZI+IeLp2HUAK2kI3aJnfmgmMaYxLYpIDP9+5RqG5mtuWTwPYLS
+QmgrUPfqgcSsZe0XiG/GPpDNFjpAIxFvAecy2Xxi8k3EGzNdd7ycS59yyeP5z01MVX+k3LD1JaMw
+4kyWz70FtFwLqdL9pjbCyCD+NRrTvobrVKMitdx8cCXkzqP3ENzlCPE9UInySCvpRmtlmGrd6aJv
+UtTnln2BrBGFP3MCbp6oeqGCWMC2+EbE1A0vMw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature156447-Object131664"><etsi:QualifyingProperties Target="#Signature156447"><etsi:SignedProperties Id="Signature156447-SignedProperties227877"><etsi:SignedSignatureProperties><etsi:SigningTime>2021-01-12T14:06:22-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>XrEVB6EIFariEAlnuu0E8ELoXCM=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUBCA-1 SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A. 1,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1277940853</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-754539"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

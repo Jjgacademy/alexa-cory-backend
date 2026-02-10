@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>2501202101179139826200120150030000299800002998014</numeroAutorizacion>
+<fechaAutorizacion>2021-01-26T11:19:37-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.1.0"><infoTributaria>   <ambiente>2</ambiente>   <tipoEmision>1</tipoEmision>   <razonSocial>FABRICA DE BATERIAS FABRIBAT CIA. LTDA.</razonSocial>   <nombreComercial>BATERIAS ECUADOR</nombreComercial>   <ruc>1791398262001</ruc>   <claveAcceso>2501202101179139826200120150030000299800002998014</claveAcceso>   <codDoc>01</codDoc>   <estab>015</estab>    <ptoEmi>003</ptoEmi>   <secuencial>000029980</secuencial>   <dirMatriz>Perimetral Regional E35 KM13 - Sector Inga Bajo</dirMatriz>  </infoTributaria> <infoFactura>    <fechaEmision>25/01/2021</fechaEmision>   <dirEstablecimiento>Perimetral Regional E35 KM 13                </dirEstablecimiento>   <contribuyenteEspecial>155</contribuyenteEspecial>    <obligadoContabilidad>SI</obligadoContabilidad>   <tipoIdentificacionComprador>04</tipoIdentificacionComprador>   <guiaRemision>000-000-000000000</guiaRemision>   <razonSocialComprador>DIAZ SANDOVAL OSCAR DIMITRI</razonSocialComprador>   <identificacionComprador>1708191141001</identificacionComprador>   <direccionComprador>ABDON CALDERON Y RIOFRIO ESQ SANGOLQUI</direccionComprador>   <totalSinImpuestos>89.11</totalSinImpuestos>   <totalDescuento>43.89</totalDescuento>   <totalConImpuestos>     <totalImpuesto>           <codigo>2</codigo>           <codigoPorcentaje>2</codigoPorcentaje>           <baseImponible>89.11</baseImponible>           <valor>10.69</valor>       </totalImpuesto> </totalConImpuestos>   <propina>0.00</propina>   <importeTotal>99.8</importeTotal>   <moneda>DOLAR</moneda>  <pagos>       <pago>           <formaPago>20</formaPago>           <total>99.8</total>           <plazo>60</plazo>           <unidadTiempo>DIAS</unidadTiempo>       </pago>   </pagos>  </infoFactura><detalles><detalle>   <codigoPrincipal>201BATEECUE4-34-HP</codigoPrincipal>   <codigoAuxiliar>7862109654842</codigoAuxiliar> <descripcion>E4 34 HP</descripcion>   <cantidad>1</cantidad>   <precioUnitario>133.000000</precioUnitario>   <descuento>43.89</descuento>   <precioTotalSinImpuesto>89.11</precioTotalSinImpuesto>   <detallesAdicionales>       <detAdicional nombre="UND" valor="UND"/>       <detAdicional nombre="LOTE" valor="0"/>       <detAdicional nombre="FECHA VEN" valor="ND"/>   </detallesAdicionales>   <impuestos>       <impuesto>           <codigo>2</codigo>           <codigoPorcentaje>2</codigoPorcentaje>           <tarifa>12</tarifa>           <baseImponible>89.11</baseImponible>           <valor>10.69</valor>       </impuesto>   </impuestos></detalle></detalles><infoAdicional> <campoAdicional nombre="ComentarioFactura">121007</campoAdicional><campoAdicional nombre="MailCliente">anitamoyav@hotmail.com</campoAdicional><campoAdicional nombre="TelCliente">2336-251</campoAdicional><campoAdicional nombre="FechaVencimiento">25/03/2021</campoAdicional><campoAdicional nombre="FormaPago">Credito</campoAdicional><campoAdicional nombre="DirCliente">ABDON CALDERON Y RIOFRIO ESQ SANGOLQUI</campoAdicional><campoAdicional nombre="OrdenDeCompra">0</campoAdicional><campoAdicional nombre="ValLetras">Noventa y nueve con 80/100 dolares americanos</campoAdicional><campoAdicional nombre="CodPFac">121007</campoAdicional><campoAdicional nombre="ExpHab">EXPORTADOR HABITUAL</campoAdicional></infoAdicional><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature51396">
+<ds:SignedInfo Id="Signature-SignedInfo928529">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID345379" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature51396-SignedProperties36780">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>9cm+uW/WNNO1qTfUmAYTFNPyans=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1261104">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>AYRJEE11QbEctsjOYbwpdihg5FY=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-515367" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>NiaS1eOIV3qIVCusFYZ5ZCs9wiw=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue156807">
+PJvfWiW4EijmJppA0VKV85Z9EiyVkamTfOtsN9aL9KKzvhke+QlyTENdiTphbzmr2PydcGlZoS8I
+/Cxt3I4wUDHV1vPio2Fl/2j+7DDwfqaDrkMmF4WtBFHDpeRaVHDteuIzj+c2X+RakWQBffX1nfuj
+8o49ETPctfH4VSvOVW6+21q19ospdX9TNybkiqcKQzUALZfv+zQfVan6Oyg1Xxf0CgRf+XsIkkX+
+a4vP41bMOZsu5fLkYPXhnHhjmc6x6kCl+t6loHS8iC5pNE9+v9D7vxIj6hHubCg3jhu9MUywq6RO
+3f0IlDef89b03baG3qImDKTxp8zhTKJ0A7cu4Q==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1261104">
+<ds:X509Data>
+<ds:X509Certificate>
+MIILgTCCCWmgAwIBAgIENrGWizANBgkqhkiG9w0BAQsFADCBmTELMAkGA1UEBhMCRUMxHTAbBgNV
+BAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAxMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJ
+T04gREUgSU5GT1JNQUNJT04xOTA3BgNVBAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNV
+QkNBLTEgU0VDVVJJVFkgREFUQTAeFw0yMDA3MjgxMzI0MjdaFw0yMjA3MjgxMzI0MjdaMIGfMQsw
+CQYDVQQGEwJFQzEdMBsGA1UECgwUU0VDVVJJVFkgREFUQSBTLkEuIDExMDAuBgNVBAsMJ0VOVElE
+QUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTjEVMBMGA1UEBRMMMjgwNzIwMDgzNDI2
+MSgwJgYDVQQDDB9MVUNJQSBNQVJHQVJJVEEgQk9MQU5PUyBPUkRPTkVaMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEArXe2LENnFG2ZpglFAHZncmcy+VuIUR/pTgHmBg/9f0bJ4mL7vzgS
+MLTF/q73nwtSr0yIlqUBKafx+hfX7agxsLvYur3ydYziyGt1qQ2OT5C4zq9DQA87CqLt3YcrlhEx
+kH5DtFYj54OiPs1zeiQbgEq/Fo6/GSxfEmuLRzNZrBXHAx2rZ7rWaTdP4oWl/bXBGGGKTsNywKUS
+TVtzAvv8/A3V+iu6bV6mx4RN8olrKSucknT3HqfqemWqBf5sWbqFylYjGzsxpP4LKaHhINGoLEUT
+Qb/ThPYq5jE/GAWBlIDrHRrmQDZqnamHTsGxl5I36jwWDTSfg4E2t1o8pQtC9wIDAQABo4IGxzCC
+BsMwWQYIKwYBBQUHAQEETTBLMEkGCCsGAQUFBzABhj1odHRwOi8vb2NzcGd3LnNlY3VyaXR5ZGF0
+YS5uZXQuZWMvZWpiY2EvcHVibGljd2ViL3N0YXR1cy9vY3NwMB0GA1UdDgQWBBRyF703OGfjQCsy
+3dOUSoOTA95LKTAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFFwPhaR0EPytASwaAD2TFwn6OQHW
+MCsGA1UdEAQkMCKADzIwMjAwNzI4MTMyNDI3WoEPMjAyMjA3MjgxMzI0MjdaMIHMBgNVHS4EgcQw
+gcEwgb6ggbuggbiGgbVsZGFwOi8vbGRhcHNkLnNlY3VyaXR5ZGF0YS5uZXQuZWMvQ049QVVUT1JJ
+REFEIERFIENFUlRJRklDQUNJT04gU1VCQ0EtMSBTRUNVUklUWSBEQVRBLE9VPUVOVElEQUQgREUg
+Q0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTixPPVNFQ1VSSVRZIERBVEEgUy5BLiAxLEM9RUM/
+ZGVsdGFSZXZvY2F0aW9uTGlzdD9iYXNlMGsGA1UdIARkMGIwYAYKKwYBBAGCpnICCjBSMFAGCCsG
+AQUFBwICMEQeQgBDAGUAcgB0AGkAZgBpAGMAYQBkAG8AIABkAGUAIABNAGkAZQBtAGIAcgBvACAA
+ZABlACAARQBtAHAAcgBlAHMAYTCCAp4GA1UdHwSCApUwggKRMIHloEGgP4Y9aHR0cDovL29jc3Bn
+dy5zZWN1cml0eWRhdGEubmV0LmVjL2VqYmNhL3B1YmxpY3dlYi9zdGF0dXMvb2NzcKKBn6SBnDCB
+mTE5MDcGA1UEAwwwQVVUT1JJREFEIERFIENFUlRJRklDQUNJT04gU1VCQ0EtMSBTRUNVUklUWSBE
+QVRBMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04xHTAb
+BgNVBAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAxMQswCQYDVQQGEwJFQzCBxKCBwaCBvoaBu2xkYXA6
+Ly9sZGFwc2Quc2VjdXJpdHlkYXRhLm5ldC5lYy9DTj1BVVRPUklEQUQgREUgQ0VSVElGSUNBQ0lP
+TiBTVUJDQS0xIFNFQ1VSSVRZIERBVEEsT1U9RU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElO
+Rk9STUFDSU9OLE89U0VDVVJJVFkgREFUQSBTLkEuIDEsQz1FQz9jZXJ0aWZpY2F0ZVJldm9jYXRp
+b25MaXN0P2Jhc2Uwgd+ggdyggdmGgdZodHRwczovL3BvcnRhbC1vcGVyYWRvci5zZWN1cml0eWRh
+dGEubmV0LmVjL2VqYmNhL3B1YmxpY3dlYi93ZWJkaXN0L2NlcnRkaXN0P2NtZD1jcmwmaXNzdWVy
+PUNOPUFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNVQkNBLTEgU0VDVVJJVFkgREFUQSxPVT1F
+TlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04sTz1TRUNVUklUWSBEQVRBIFMu
+QS4gMSxDPUVDMAsGA1UdDwQEAwIF4DAnBgNVHREEIDAegRxsYm9sYW5vc0BiYXRlcmlhc2VjdWFk
+b3IuY29tMBoGCisGAQQBgqZyAwEEDAwKMTcxODQ3NDAyNDAfBgorBgEEAYKmcgMCBBEMD0xVQ0lB
+IE1BUkdBUklUQTAXBgorBgEEAYKmcgMDBAkMB0JPTEFOT1MwFwYKKwYBBAGCpnIDBAQJDAdPUkRP
+TkVaMCsGCisGAQQBgqZyAwUEHQwbQ09PUkRJTkFET1JBIEFETUlOSVNUUkFUSVZBMDgGCisGAQQB
+gqZyAwcEKgwoUFJJTkNJUEFMIFMgTiBZIFBFUklNRVRSQUwgUkVHSU9OQUwgRSAzNTAcBgorBgEE
+AYKmcgMIBA4MDDU5Mzk4NTQ4OTcxMTAVBgorBgEEAYKmcgMJBAcMBVFVSVRPMDcGCisGAQQBgqZy
+AwoEKQwnRkFCUklDQSBERSBCQVRFUklBUyBGQUJSSUJBVCBDSUEuIExUREEuMB0GCisGAQQBgqZy
+AwsEDwwNMTc5MTM5ODI2MjAwMTAXBgorBgEEAYKmcgMMBAkMB0VDVUFET1IwEgYKKwYBBAGCpnID
+HQQEDAJObzAfBgorBgEEAYKmcgMgBBEMDzAwMjAwMTAwMDA2MjE3MzATBgorBgEEAYKmcgMhBAUM
+A1BGWDARBgorBgEEAYKmcgMiBAMMAS4wDQYJKoZIhvcNAQELBQADggIBABRZkrWLkKvfCOHnOPS9
+w3sqAf7cEyAUIlcSABvSkptdvOtmJf+72bJx/qgu+o1KqSkOU5oclNu+OtoR/AzkQxbBh771SOgJ
+M9vEW5R7oTq0XatCQUfm/b7HO7epjDYuZmHfgbRH0E5AGmRKXP1mxMX/UqBf1OhZwiOiZ9RfXGyX
+aotUtej5Maxa0yXd0/9/ZIM99gGvbugpSxaHRH/xxdcE1/wE+T6KScx3e0AMWJUbAV0TsCD1yOsX
+hxxaEpCtHjizlffn7x3kIXXPIwIDV6o2Q5QnR4wP3AoOfv7pjVjjOoPDksXj19R7uPTN1jQHKzc7
+ibUrqwm9FbQe2C+ahCkMxYREFdfndpCAiLEycvb/JFZQLwO6y7Jj4kRi5nG7HaOiTq/HsKE6K7+j
+YoaY/eYNpFecg0KHvjcBcjmdAE/oJQkin7kq1Pd6u9sD/POXs0XhS0mOi436xoWJ4kuZh/HHcQ+h
+F9ll5g8ZhxdQ0pKoEr6odPcobkK9zdMQU9DS58WCWOxOVX6pFb4AfjSCihHxI7/f9bSgkFfJ6B85
+iCc3ppxMvCA6envpU0bYjknKYgaWL3eSv1S3ilbtuJN+M1NF94nh+wi2GVocnuO9zw37boAXKCZt
+g4Lyiu1kS70EHzmmou/wZW9gyJC7vWsO0Sks0uALMVCtxNXb4mKeOBBC
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+rXe2LENnFG2ZpglFAHZncmcy+VuIUR/pTgHmBg/9f0bJ4mL7vzgSMLTF/q73nwtSr0yIlqUBKafx
++hfX7agxsLvYur3ydYziyGt1qQ2OT5C4zq9DQA87CqLt3YcrlhExkH5DtFYj54OiPs1zeiQbgEq/
+Fo6/GSxfEmuLRzNZrBXHAx2rZ7rWaTdP4oWl/bXBGGGKTsNywKUSTVtzAvv8/A3V+iu6bV6mx4RN
+8olrKSucknT3HqfqemWqBf5sWbqFylYjGzsxpP4LKaHhINGoLEUTQb/ThPYq5jE/GAWBlIDrHRrm
+QDZqnamHTsGxl5I36jwWDTSfg4E2t1o8pQtC9w==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature51396-Object664458"><etsi:QualifyingProperties Target="#Signature51396"><etsi:SignedProperties Id="Signature51396-SignedProperties36780"><etsi:SignedSignatureProperties><etsi:SigningTime>2021-01-26T11:19:32-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>G/l+De97CAiV7In1aJoUIj5WVak=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUBCA-1 SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A. 1,C=EC</ds:X509IssuerName><ds:X509SerialNumber>917608075</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-515367"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

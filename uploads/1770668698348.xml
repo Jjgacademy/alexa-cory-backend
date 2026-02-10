@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>0801202101179047524700120010060244449412444494119</numeroAutorizacion>
+<fechaAutorizacion>2021-01-09T19:20:34-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?><factura id="comprobante" version="2.1.0">  <infoTributaria>    <ambiente>2</ambiente>    <tipoEmision>1</tipoEmision>    <razonSocial>AIG METROPOLITANA CIA. DE SEGUROS Y REASEGUROS S.A.</razonSocial>    <nombreComercial>AIG Metropolitana</nombreComercial>    <ruc>1790475247001</ruc>    <claveAcceso>0801202101179047524700120010060244449412444494119</claveAcceso>    <codDoc>01</codDoc>    <estab>001</estab>    <ptoEmi>006</ptoEmi>    <secuencial>024444941</secuencial>    <dirMatriz>QUITO BRASIL 293 Y ANTONIO GRANDA CENTENO</dirMatriz>  </infoTributaria>  <infoFactura>    <fechaEmision>08/01/2021</fechaEmision>    <dirEstablecimiento>GUAYAQUIL:Parque Empresarial Colón Edif. Corp II 2piso Of.203 CUENCA:AV. ORDOÑEZ LASSO 5-42 Y LAURELES</dirEstablecimiento>    <contribuyenteEspecial>5368</contribuyenteEspecial>    <obligadoContabilidad>SI</obligadoContabilidad>    <tipoIdentificacionComprador>05</tipoIdentificacionComprador>    <razonSocialComprador>DIAZ SANDOVAL OSCAR DIMITRI</razonSocialComprador>    <identificacionComprador>1708191141</identificacionComprador>    <totalSinImpuestos>4.99</totalSinImpuestos>    <totalDescuento>0.00</totalDescuento>    <totalConImpuestos>      <totalImpuesto>        <codigo>2</codigo>        <codigoPorcentaje>0</codigoPorcentaje>        <baseImponible>4.99</baseImponible>        <tarifa>0</tarifa>        <valor>0.00</valor>      </totalImpuesto>    </totalConImpuestos>    <propina>0.00</propina>    <importeTotal>4.99</importeTotal>    <moneda>DOLAR</moneda>    <pagos>      <pago>        <formaPago>20</formaPago>        <total>4.99</total>        <plazo>15</plazo>        <unidadTiempo>DIAS</unidadTiempo>      </pago>    </pagos>  </infoFactura>  <detalles>    <detalle>      <codigoPrincipal>567440</codigoPrincipal>      <codigoAuxiliar>0</codigoAuxiliar>      <descripcion>50186- DESGRAVAMEN DINERS ANTIGUOS</descripcion>      <cantidad>1.00</cantidad>      <precioUnitario>4.80</precioUnitario>      <descuento>0.00</descuento>      <precioTotalSinImpuesto>4.80</precioTotalSinImpuesto>      <detallesAdicionales>        <detAdicional nombre="Sucursal" valor="QUITO"/>        <detAdicional nombre="Ramo" valor="VIDA COLECTIVO"/>        <detAdicional nombre="NroPoliza" valor="50186"/>      </detallesAdicionales>      <impuestos>        <impuesto>          <codigo>2</codigo>          <codigoPorcentaje>0</codigoPorcentaje>          <tarifa>0</tarifa>          <baseImponible>4.80</baseImponible>          <valor>0.00</valor>        </impuesto>      </impuestos>    </detalle>    <detalle>      <codigoPrincipal>0</codigoPrincipal>      <codigoAuxiliar>0</codigoAuxiliar>      <descripcion>SUPER DE BANCOS</descripcion>      <cantidad>1.00</cantidad>      <precioUnitario>0.17</precioUnitario>      <descuento>0.00</descuento>      <precioTotalSinImpuesto>0.17</precioTotalSinImpuesto>      <impuestos>        <impuesto>          <codigo>2</codigo>          <codigoPorcentaje>0</codigoPorcentaje>          <tarifa>0</tarifa>          <baseImponible>0.17</baseImponible>          <valor>0.00</valor>        </impuesto>      </impuestos>    </detalle>    <detalle>      <codigoPrincipal>1</codigoPrincipal>      <codigoAuxiliar>0</codigoAuxiliar>      <descripcion>SEGURO CAMPESINO</descripcion>      <cantidad>1.00</cantidad>      <precioUnitario>0.02</precioUnitario>      <descuento>0.00</descuento>      <precioTotalSinImpuesto>0.02</precioTotalSinImpuesto>      <impuestos>        <impuesto>          <codigo>2</codigo>          <codigoPorcentaje>0</codigoPorcentaje>          <tarifa>0</tarifa>          <baseImponible>0.02</baseImponible>          <valor>0.00</valor>        </impuesto>      </impuestos>    </detalle>  </detalles>  <infoAdicional>    <campoAdicional nombre="CodInternoSAP">25807586</campoAdicional>    <campoAdicional nombre="CodSociedad">1078</campoAdicional>    <campoAdicional nombre="DetInfoAdic">VIDA COLECTIVO</campoAdicional>    <campoAdicional nombre="DetInfoAdic1">Suma Asegurada: 20000.00</campoAdicional>    <campoAdicional nombre="DetInfoAdic2">Vigencia: 2021.01.01 AL 2021.01.31</campoAdicional>    <campoAdicional nombre="emailCliente">Ecuador.GestionFacturas@aig.com</campoAdicional>  </infoAdicional><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature169545">
+<ds:SignedInfo Id="Signature-SignedInfo978382">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID1019743" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature169545-SignedProperties296982">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>J8AwSRKecqgrGu9O6VxERqjYO+c=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1176563">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>NY3bzqcK9z1qokhzhVUFDETOhP8=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-375576" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>u+Jv3MrNx3QjhZXcLfRfeYrBTw8=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue195785">
+xWi4mBg3cHqC7db59PXHGgBYwY5TNkHHqDel6OgTH6ELhoxRz7SLm+xacJopVNkZPGoCNrS5RgLR
+eyT/4GRpzHvgdX1P6Rs5QZ4MfDVMqzVfPLkBrcMpdbplpzHdCbCkDHhcEP9gkyqmh6/kCQ/yGFAz
+hnzmGD4q/QZ+l/mfuSxZbD1R27z90UbHkcCcUosKH5jJpLoYrRGZARe9SnzIVKdvnODWY9i9G4KX
+qnIOHbK/j7IR6/secbozNHaWgXizd6wezG9ihYxi2+M3DBDeKKeJYvujUwKT+vzqKDhppTxf/cSe
+vwC+UdEJU2Ptpoxzfltx2sSI2lpRmDOCtrVyBw==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1176563">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJzDCCCLSgAwIBAgIEVNITijANBgkqhkiG9w0BAQsFADCBkzELMAkGA1UEBhMCRUMxGzAZBgNV
+BAoTElNFQ1VSSVRZIERBVEEgUy5BLjEwMC4GA1UECxMnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9O
+IERFIElORk9STUFDSU9OMTUwMwYDVQQDEyxBVVRPUklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUIg
+U0VDVVJJVFkgREFUQTAeFw0xODA4MTcxMzEzNTVaFw0yMTA4MTcxMzQzNTVaMIGRMQswCQYDVQQG
+EwJFQzEbMBkGA1UEChMSU0VDVVJJVFkgREFUQSBTLkEuMTAwLgYDVQQLEydFTlRJREFEIERFIENF
+UlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04xMzATBgNVBAUTDDE2MDgxODE4MTQ1NTAcBgNVBAMT
+FUZBQklPIENBQlJBTCBEQSBTSUxWQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOgq
+phKww2Dvr5QdJ3kSBioGwqR5yglrQ2tvFTD8Z8D314+skycJEQ5yOlXcRFM8hL3pTJQ4fcZpTj0x
+UrAGbvnzRZaktkHg4uZFxOf7KdMnH4ONq88BjG2MsHDsRkYL4WlWPgW+6vhbOLv1nEUjVaUwiG2L
+WdWCA5nxDRpX6pZsi4A5REo1pQ2IAP+jJ0+DLGGP2PsJyZkBdHVdp3khF3SHBGpFh+h86Hae75CU
+dSpWt6lOClXG8bqA6MLzgep8qTiYyL/IChGAwg7bUnjN/03H+XeLnQx+MlDP375YuLjn2pIBHe/A
+zbqrpLvDwTBLFA7m5Ck89fgDacDlKlpvDYkCAwEAAaOCBiYwggYiMAsGA1UdDwQEAwIF4DBZBggr
+BgEFBQcBAQRNMEswSQYIKwYBBQUHMAGGPWh0dHA6Ly9vY3NwZ3cuc2VjdXJpdHlkYXRhLm5ldC5l
+Yy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVzL29jc3AwgcwGA1UdIASBxDCBwTBABgorBgEEAYKmcgIJ
+MDIwMAYIKwYBBQUHAgIwJBoiQ2VydGlmaWNhZG8gZGUgUmVwcmVzZW50YW50ZSBMZWdhbDB9Bgor
+BgEEAYKmcgIDMG8wbQYIKwYBBQUHAgEWYWh0dHBzOi8vd3d3LnNlY3VyaXR5ZGF0YS5uZXQuZWMv
+bGV5ZXNfbm9ybWF0aXZhcy9Qb2xpdGljYXMgZGUgQ2VydGlmaWNhZG8gUmVwcmVzZW50YW50ZSBM
+ZWdhbC5wZGYwQwYKKwYBBAGCpnIDCgQ1EzNBSUcgTUVUUk9QT0xJVEFOQSBDSUEuIERFIFNFR1VS
+T1MgWSBSRUFTRUdVUk9TIFMuQS4wHQYKKwYBBAGCpnIDCwQPEw0xNzkwNDc1MjQ3MDAxMBgGCisG
+AQQBgqZyAwEEChMIRk04OTQwOTYwFQYKKwYBBAGCpnIDAgQHEwVGQUJJTzAWBgorBgEEAYKmcgMD
+BAgTBkNBQlJBTDAYBgorBgEEAYKmcgMEBAoTCERBIFNJTFZBMCQGCisGAQQBgqZyAwUEFhMUUFJF
+U0lERU5URSBFSkVDVVRJVk8wRgYKKwYBBAGCpnIDBwQ4EzZCUkFTSUwgMjkzIFkgQU5UT05JTyBH
+UkFOREEgQ0VOVEVOTyBFRElGLiBJQUNBIFBJU08gNSAwGwYKKwYBBAGCpnIDCAQNEws1OTMyMjky
+NDQyNDAVBgorBgEEAYKmcgMJBAcTBVFVSVRPMBcGCisGAQQBgqZyAwwECRMHRUNVQURPUjAfBgor
+BgEEAYKmcgMgBBETDzAwMjAwMTAwMDAyNTI1MDATBgorBgEEAYKmcgMhBAUTA1BGWDAfBgNVHREE
+GDAWgRRmYWJpby5jYWJyYWxAYWlnLmNvbTCCAnsGA1UdHwSCAnIwggJuMIICaqCCAmagggJihj1o
+dHRwOi8vb2NzcGd3LnNlY3VyaXR5ZGF0YS5uZXQuZWMvZWpiY2EvcHVibGljd2ViL3N0YXR1cy9v
+Y3NwhoHVbGRhcDovL2RpcmVjdC5zZWN1cml0eWRhdGEubmV0LmVjL2NuPUNSTDI0NSxjbj1BVVRP
+UklEQUQlMjBERSUyMENFUlRJRklDQUNJT04lMjBTVUIlMjBTRUNVUklUWSUyMERBVEEsb3U9RU5U
+SURBRCUyMERFJTIwQ0VSVElGSUNBQ0lPTiUyMERFJTIwSU5GT1JNQUNJT04sbz1TRUNVUklUWSUy
+MERBVEElMjBTLkEuLGM9RUM/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlhoGeaHR0cHM6
+Ly9kaXJlY3Quc2VjdXJpdHlkYXRhLm5ldC5lYy9+Y3JsL2F1dG9yaWRhZF9kZV9jZXJ0aWZpY2Fj
+aW9uX3N1Yl9zZWN1cml0eV9kYXRhX2VudGlkYWRfZGVfY2VydGlmaWNhY2lvbl9kZV9pbmZvcm1h
+Y2lvbl9jdXJpdHlfZGF0YV9zLmEuX2NfZWNfY3JsZmlsZS5jcmykgacwgaQxCzAJBgNVBAYTAkVD
+MRswGQYDVQQKExJTRUNVUklUWSBEQVRBIFMuQS4xMDAuBgNVBAsTJ0VOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTjE1MDMGA1UEAxMsQVVUT1JJREFEIERFIENFUlRJRklDQUNJ
+T04gU1VCIFNFQ1VSSVRZIERBVEExDzANBgNVBAMTBkNSTDI0NTArBgNVHRAEJDAigA8yMDE4MDgx
+NzEzMTM1NVqBDzIwMjEwODE3MTM0MzU1WjAfBgNVHSMEGDAWgBT3L0zgdedio3iWWwa2LnE7zGw/
+kDAdBgNVHQ4EFgQUxuUtoife7jTO+9kq103thFfo6yowCQYDVR0TBAIwADAZBgkqhkiG9n0HQQAE
+DDAKGwRWOC4xAwIDqDANBgkqhkiG9w0BAQsFAAOCAQEAevb60fcE69iHmF7Kz3M3CYQfobrhum0P
++WJwGQqjNdCiM9N2cCJ1HGxiX1EBw1E9c+TcG0LbNRHkPBMj2A2nbVoR33/5FIXpE3dWY1lfYdj5
+2L80nk9l2cPgEJRVLd4usmsGVz69gj1Eui/SdSu9d6vK+1DPQGKEM0QrNrD5xJ8p2AWNSL6RiyrV
+VdH/W6brjDE5O7D6wiuG3WSw5v/T4YIJxsuf8HxUz+tTBeQt3YnQPLucJK0lj7IO/d1RroTWFkIQ
+5u2pEsn4vAxcaR7KjiLYiE+4jHZrsDcCVRjAmTAs6GZHUBLCb2mpRaKgXrvUgKXwXzoG32turXNF
+qP8CUQ==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+6CqmErDDYO+vlB0neRIGKgbCpHnKCWtDa28VMPxnwPfXj6yTJwkRDnI6VdxEUzyEvelMlDh9xmlO
+PTFSsAZu+fNFlqS2QeDi5kXE5/sp0ycfg42rzwGMbYywcOxGRgvhaVY+Bb7q+Fs4u/WcRSNVpTCI
+bYtZ1YIDmfENGlfqlmyLgDlESjWlDYgA/6MnT4MsYY/Y+wnJmQF0dV2neSEXdIcEakWH6Hzodp7v
+kJR1Kla3qU4KVcbxuoDowvOB6nypOJjIv8gKEYDCDttSeM3/Tcf5d4udDH4yUM/fvli4uOfakgEd
+78DNuquku8PBMEsUDubkKTz1+ANpwOUqWm8NiQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature169545-Object304649"><etsi:QualifyingProperties Target="#Signature169545"><etsi:SignedProperties Id="Signature169545-SignedProperties296982"><etsi:SignedSignatureProperties><etsi:SigningTime>2021-01-09T13:29:22-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>g9S+Ja46gDMiA+O8DlgNNxlJFF8=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUB SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A.,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1423053706</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-375576"><etsi:Description>comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

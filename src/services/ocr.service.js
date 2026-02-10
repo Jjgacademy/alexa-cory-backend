@@ -130,28 +130,55 @@ export const analizarTextoFactura = (texto) => {
   // ======================
   // Caso típico: "MARIANA ... R.U.C. 170..."
   // Si la primera línea trae "RUC" o "R.U.C", se corta antes de eso.
-  let nombre = lineas[0] || "";
-  if (/R\.?\s*U\.?\s*C\.?/i.test(nombre) || /\bRUC\b/i.test(nombre)) {
-    nombre = limpiar(
-      nombre
-        .replace(/\bR\.?\s*U\.?\s*C\.?.*$/i, "") // corta desde RUC
-        .replace(/\bRUC\b.*$/i, "")
-    );
-  }
+  // ======================
+// NOMBRE + ACTIVIDAD ECONÓMICA
+// ======================
 
-  // Si por OCR el nombre viene con el ruc pegado sin "RUC"
-  // ejemplo: "MARIANA ... 1704587052001"
-  // y ese número coincide con el RUC detectado, lo retiramos.
-  if (rucProveedor && nombre.includes(rucProveedor)) {
-    nombre = limpiar(nombre.replace(rucProveedor, ""));
-  }
+// Primera línea = nombre proveedor
+let nombre = lineas[0] || "";
 
-  // fallback: si la primera línea queda vacía, intenta antes de "VENTA" o "NOTA"
-  if (!nombre) {
-    nombre =
-      limpiar(match1(todo, /^(.+?)\b(NOTA\s+DE\s+VENTA|FACTURA|VENTA\s+DE)\b/i)) ||
-      (lineas[0] || "");
+// limpia RUC pegado al nombre
+if (/R\.?\s*U\.?\s*C\.?/i.test(nombre) || /\bRUC\b/i.test(nombre)) {
+  nombre = limpiar(
+    nombre
+      .replace(/\bR\.?\s*U\.?\s*C\.?.*$/i, "")
+      .replace(/\bRUC\b.*$/i, "")
+  );
+}
+
+// si nombre trae ruc pegado sin texto "RUC"
+if (rucProveedor && nombre.includes(rucProveedor)) {
+  nombre = limpiar(nombre.replace(rucProveedor, ""));
+}
+
+// fallback por si el OCR dañó la primera línea
+if (!nombre) {
+  nombre =
+    limpiar(match1(todo, /^(.+?)\b(NOTA\s+DE\s+VENTA|FACTURA|VENTA\s+DE)\b/i)) ||
+    (lineas[0] || "");
+}
+
+// ======================
+// ACTIVIDAD ECONÓMICA
+// ======================
+
+let actividad = "";
+
+// Buscar la línea válida debajo del nombre
+for (let i = 1; i < Math.min(6, lineas.length); i++) {
+  const l = lineas[i];
+
+  if (
+    !/Direcci[oó]n/i.test(l) &&
+    !/Cel/i.test(l) &&
+    !/R\.?U\.?C/i.test(l) &&
+    !/CONTRIBUYENTE/i.test(l) &&
+    !/NOTA/i.test(l)
+  ) {
+    actividad = limpiar(l);
+    break;
   }
+}
 
   // ======================
   // DIRECCION / CEL / CIUDAD
@@ -160,35 +187,79 @@ export const analizarTextoFactura = (texto) => {
     match1(todo, /Direcci[oó]n\s*:?\s*(.+?)(\bCel\b|TELF|TEL|R\.?\s*U\.?\s*C|RUC|NOTA\s+DE\s+VENTA)/i)
   );
 
-  const celular = soloDigitos(
-    match1(todo, /\b(Cel\.?|Celular)\s*:?\s*([0-9][0-9\s\-]{6,})/i)
+  let celular = "";
+
+  // busca línea que tenga Cel / Tel
+  const lineaCel = lineas.find((l) =>
+    /(Cel\.?|Celular|Telefono|Tel\.?|TELF)/i.test(l)
   );
 
+  if (lineaCel) {
+    const m = lineaCel.match(/(09\d{8})/);
+    if (m) celular = m[1];
+  }
+
+  // fallback: busca cualquier celular ecuatoriano
+  if (!celular) {
+    const m = todo.match(/\b(09\d{8})\b/);
+    if (m) celular = m[1];
+  }
+
   // ciudad: intenta "Quito - Ecuador" o "Quito Ecuador" o "... - Ecuador"
-  const ciudad =
-    limpiar(match1(todo, /([A-ZÁÉÍÓÚÑa-záéíóúñ]+)\s*[-–]\s*Ecuador/i)) ||
-    limpiar(match1(todo, /(Quito\s*[-–]?\s*Ecuador)/i)) ||
-    limpiar(match1(todo, /([A-ZÁÉÍÓÚÑa-záéíóúñ]+)\s+Ecuador/i));
+  let ciudad = "";
+
+if (lineaCel) {
+  // quitar el número antes de extraer ciudad
+  const sinNumero = lineaCel.replace(/09\d{8}/, "");
+  const m = sinNumero.match(/([A-Za-zÁÉÍÓÚÑáéíóúñ\s\-]+Ecuador)/i);
+  if (m) ciudad = limpiar(m[1]);
+}
+
+if (!ciudad) {
+  ciudad =
+    limpiar(match1(todo, /([A-Za-zÁÉÍÓÚÑáéíóúñ\s\-]+Ecuador)/i)) || "";
+}
 
   const contribuyente = lineas.find((l) => /CONTRIBUYENTE/i.test(l)) || "";
 
-  // ======================
-  // NOTA DE VENTA / NUMERO
-  // ======================
-  // nota de venta suele ser: 001-001-000005909 o 001-001-00 0002974 (OCR raro)
-  // 1) intenta serie completa
-  let notaVenta =
-    match1(todo, /\b(\d{3}-\d{3}-\d{1,9})\b/) ||
-    match1(todo, /\b(\d{3}\s*-\s*\d{3}\s*-\s*\d{1,9})\b/).replace(/\s+/g, "");
+ // ======================
+// NOTA DE VENTA / NUMERO (seguro)
+// ======================
 
-  // 2) si no hay serie, intenta capturar "NOTA DE VENTA" + secuencial
-  if (!notaVenta) {
-    const sec = match1(todo, /NOTA\s+DE\s+VENTA\s*[^\d]{0,10}(\d{4,9})/i);
-    if (sec) notaVenta = sec;
+// serie: 001-001-00
+const serie = match1(
+  todo,
+  /\b(\d{3}\s*-\s*\d{3}\s*-\s*\d{2})\b/
+).replace(/\s+/g, "");
+
+// número grande rojo: 0002974
+const secuencial = match1(
+  todo,
+  /NOTA\s+DE\s+VENTA[^\d]{0,15}(\d{4,9})/i
+);
+
+// combinar ambos
+let notaVenta = match1(
+  todo,
+  /\b(\d{3}-\d{3}-\d{2}\s*\d{4,9})\b/
+).replace(/\s+/g, "");
+
+// 2️⃣ si viene separado en dos líneas (serie arriba, número abajo)
+if (!notaVenta) {
+  const serie = match1(todo, /\b(\d{3}-\d{3}-\d{2})\b/);
+  const numeroGrande = match1(todo, /\b(0{2,}\d{3,9})\b/);
+
+  if (serie && numeroGrande) {
+    notaVenta = `${serie}${numeroGrande}`;
   }
+}
 
-  // "factura" como secuencial aislado (fallback)
-  const factura = match1(todo, /\b(\d{4,9})\b/);
+// 3️⃣ fallback: serie completa ya unida
+if (!notaVenta) {
+  notaVenta = match1(todo, /\b(\d{3}-\d{3}-\d{6,9})\b/);
+}
+// este campo lo dejamos porque el sistema lo espera
+const factura = "";
 
   // ======================
   // AUTORIZACION SRI (número)
@@ -302,6 +373,7 @@ export const analizarTextoFactura = (texto) => {
   const parsed = {
     proveedor: {
       nombre,
+      actividad,
       direccion,
       celular,
       ciudad,

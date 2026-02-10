@@ -38,6 +38,8 @@ import invoiceRoutes from "./routes/invoice.routes.js";
 import reminderRoutes from "./routes/reminder.routes.js";
 import uploadRoutes from "./routes/upload.routes.js";
 import ocrRoutes from "./routes/ocr.routes.js";
+import otrosRoutes from "./routes/otrosDocumentos.routes.js";
+import fileUpload from "express-fileupload";
 
 import "./services/reminder.service.js";
 
@@ -61,6 +63,11 @@ app.use(cors({
    ========================= */
 app.use(express.json());
 
+app.use(fileUpload({
+    createParentPath: true,
+    limits: { fileSize: 20 * 1024 * 1024 }, // Límite de 20MB
+}));
+
 /* =========================
    DB CHECK
    ========================= */
@@ -81,6 +88,8 @@ app.use("/api/reminders", reminderRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/ocr", ocrRoutes);
 app.use("/api/ruc", rucRoutes);
+app.use("/api/otros", otrosRoutes);
+
 
 /* =========================
    HEALTH CHECK
@@ -97,3 +106,4 @@ const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`🚀 Backend corriendo en http://localhost:${PORT}`);
 });
+

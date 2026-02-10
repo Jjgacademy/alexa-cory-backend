@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>1901202101179005388100120019990479299630049111816</numeroAutorizacion>
+<fechaAutorizacion>2021-01-20T20:02:44-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.0.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Empresa Eléctrica Quito S.A.E.E.Q.</razonSocial><nombreComercial>Empresa Eléctrica Quito S.A.E.E.Q.</nombreComercial><ruc>1790053881001</ruc><claveAcceso>1901202101179005388100120019990479299630049111816</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>999</ptoEmi><secuencial>047929963</secuencial><dirMatriz>Bartolome de las Casas E1-24 y Av. 10 de Agosto</dirMatriz></infoTributaria><infoFactura><fechaEmision>19/01/2021</fechaEmision><dirEstablecimiento>Bartolome de las Casas E1-24 y Av. 10 de Agosto</dirEstablecimiento><contribuyenteEspecial>5368</contribuyenteEspecial><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionComprador>05</tipoIdentificacionComprador><razonSocialComprador>DIAZ SANDOVAL OSCAR DIMITRI</razonSocialComprador><identificacionComprador>1708191141</identificacionComprador><direccionComprador>SAN JUAN DE DIOS 511 RIO ZAMORA / EC / ALANGASÍ - QUITO</direccionComprador><totalSinImpuestos>149.55</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>7</codigoPorcentaje><baseImponible>0.05</baseImponible><valor>0.00</valor></totalImpuesto><totalImpuesto><codigo>2</codigo><codigoPorcentaje>0</codigoPorcentaje><baseImponible>149.50</baseImponible><valor>0.00</valor></totalImpuesto></totalConImpuestos><propina>0.00</propina><importeTotal>149.55</importeTotal><moneda>DOLAR</moneda><pagos><pago><formaPago>01</formaPago><total>149.55</total><plazo>15</plazo><unidadTiempo>días</unidadTiempo></pago></pagos></infoFactura><detalles><detalle><codigoPrincipal>STATIT</codigoPrincipal><descripcion>Intereses por Mora</descripcion><cantidad>1.00</cantidad><precioUnitario>0.05</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>0.05</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>7</codigoPorcentaje><tarifa>0</tarifa><baseImponible>0.05</baseImponible><valor>0.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>ZAPUGE</codigoPrincipal><descripcion>Serv. Alum. Públic. General</descripcion><cantidad>1.00</cantidad><precioUnitario>9.54</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>9.54</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>0</codigoPorcentaje><tarifa>0</tarifa><baseImponible>9.54</baseImponible><valor>0.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>ZCOMER</codigoPrincipal><descripcion>Comercialización</descripcion><cantidad>1.00</cantidad><precioUnitario>1.41</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>1.41</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>0</codigoPorcentaje><tarifa>0</tarifa><baseImponible>1.41</baseImponible><valor>0.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>ZENERG</codigoPrincipal><descripcion>Energía total</descripcion><cantidad>1.00</cantidad><precioUnitario>125.83</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>125.83</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>0</codigoPorcentaje><tarifa>0</tarifa><baseImponible>125.83</baseImponible><valor>0.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>ZSUCRS</codigoPrincipal><descripcion>Subsidio Cruzado Solidario</descripcion><cantidad>1.00</cantidad><precioUnitario>12.72</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>12.72</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>0</codigoPorcentaje><tarifa>0</tarifa><baseImponible>12.72</baseImponible><valor>0.00</valor></impuesto></impuestos></detalle></detalles><infoAdicional><campoAdicional nombre="CODIGO UNICO ELECTRICO NACIONAL">1410017372</campoAdicional><campoAdicional nombre="CONTRIBUCION BOMBEROS">2.00</campoAdicional><campoAdicional nombre="TASA RECOLECCION BASURA">35.35</campoAdicional><campoAdicional nombre="FORMA DE PAGO TERCEROS BASURA Y BOMBEROS">SIN UTILIZACION DEL SISTEMA FINANCIERO</campoAdicional><campoAdicional nombre="TOTAL FORMA DE PAGO TERCEROS BASURA Y BOMBEROS">37.35</campoAdicional></infoAdicional><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature898667">
+<ds:SignedInfo Id="Signature-SignedInfo1042145">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></ds:CanonicalizationMethod>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></ds:SignatureMethod>
+<ds:Reference Id="SignedPropertiesID606213" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature898667-SignedProperties348156">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>7xI+UGpV/Hd84P59kerov+wntPM=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1941292">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>5z8hnt33NZw4QmWjTgR/IZubsb8=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-1001446" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>Qw2WWMaFXPwNde0MQ/L9K43Hw+0=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue638568">
+WOXkYWJIwUmktt5FBrQOwp5ofJahlVL3PCleL8bMTFxBTxRPJpyGW+rNkye00Tf7hDINRmzZiiM/
+x8PfKh+om08PLUW8ti7fmJMbzuXk+obY4OXWOYdeEST08VFeFfAZOeCcAbAqQWe6+u1UBM/Sl0Hh
+kh2mULvzRPAu8m28xLuVEfgOB2cBnOhUMXwWdbHp0JE2S1p65JbOHDePXEQcH5tl0+ZXmEiOKdl4
+sin61CuZmTFq8+fjCGhmZP9lq3QZQTZ6yZ8JrDwgQFNeLgGNrnFfGL/95IzdQOqx8KhEy8J/sqqq
+laTjUfzLfZ5jeZDtxUf4eX+6eATlybtd2aB9uQ==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1941292">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIKIDCCCAigAwIBAgIEW2HOkzANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE5MTIwMjE1MzY0MFoXDTIxMTIwMjE2MDY0
+MFowgbcxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE7MBEGA1UEBRMKMDAwMDQyMTc0NjAmBgNVBAMTH01BUklBIEJFQVRSSVog
+Q0hVUVVJTUFSQ0EgTE9QRVowggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCt+/FGxC6Z
+V1QQ3+Ht3urL+pTsWfuAvBHQeuKRmmvBnvP458cG7Da+ZbhwmitlQZyidqoQEgTUQLhyMq79XzKW
+RCJxEEuRr2EPi1cl+ihXk+qi1hSoL+Ee4aeEU5GR5b8kiDNUsEIDxoRb5z5k14zwlJhM3fs4Xyhs
+b3BWNV7Q4nGh59Y+uiYpVGopary7wM6iNGbmqEemw7AIP+dTK0xyWPW6I3R+3v9lM+rUbsB/3MuC
+fQrx6+1Kbs0r8dZew3TBwnap9gqj4use3UjWd7L9Qk7WqPed3VJHiKp2A5N+y/iOqj5dhnuJxuwg
+bRqggN1IPRYBWDE0Y8/8QFHLwPX7AgMBAAGjggVGMIIFQjALBgNVHQ8EBAMCB4AwZwYDVR0gBGAw
+XjBcBgsrBgEEAYKoOwICATBNMEsGCCsGAQUFBwIBFj9odHRwOi8vd3d3LmVjaS5iY2UuZWMvcG9s
+aXRpY2EtY2VydGlmaWNhZG8vcGVyc29uYS1qdXJpZGljYS5wZGYwgZEGCCsGAQUFBwEBBIGEMIGB
+MD4GCCsGAQUFBzABhjJodHRwOi8vb2NzcC5lY2kuYmNlLmVjL2VqYmNhL3B1YmxpY3dlYi9zdGF0
+dXMvb2NzcDA/BggrBgEFBQcwAYYzaHR0cDovL29jc3AxLmVjaS5iY2UuZWMvZWpiY2EvcHVibGlj
+d2ViL3N0YXR1cy9vY3NwMC4GCisGAQQBgqg7AwoEIBMeRU1QUkVTQSBFTEVDVFJJQ0EgUVVJVE8g
+U0EgRUVRMB0GCisGAQQBgqg7AwsEDxMNMTc5MDA1Mzg4MTAwMTAaBgorBgEEAYKoOwMBBAwTCjE3
+MTc2NTUwODYwHQYKKwYBBAGCqDsDAgQPEw1NQVJJQSBCRUFUUklaMBsGCisGAQQBgqg7AwMEDRML
+Q0hVUVVJTUFSQ0EwFQYKKwYBBAGCqDsDBAQHEwVMT1BFWjA2BgorBgEEAYKoOwMFBCgTJkpFRkUg
+REVMIERFUEFSVEFNRU5UTyBDT05UUk9MIENMSUVOVEVTMDkGCisGAQQBgqg7AwcEKxMpQVYgTUFS
+SUFOQSBERSBKRVNVUyBZIEFWIDEwIERFIEFHT1NUTyBFU1EwGQYKKwYBBAGCqDsDCAQLEwkwMjM5
+NjQ3MDAwFQYKKwYBBAGCqDsDCQQHEwVRdWl0bzAXBgorBgEEAYKoOwMMBAkTB0VDVUFET1IwIAYK
+KwYBBAGCqDsDMwQSExBTT0ZUV0FSRS1BUkNISVZPMCIGA1UdEQQbMBmBF21jaHVxdWltYXJjYUBl
+ZXEuY29tLmVjMIIB3wYDVR0fBIIB1jCCAdIwggHOoIIByqCCAcaGgdVsZGFwOi8vYmNlcWxkYXBz
+dWJwMS5iY2UuZWMvY249Q1JMODc5LGNuPUFDJTIwQkFOQ08lMjBDRU5UUkFMJTIwREVMJTIwRUNV
+QURPUixsPVFVSVRPLG91PUVOVElEQUQlMjBERSUyMENFUlRJRklDQUNJT04lMjBERSUyMElORk9S
+TUFDSU9OLUVDSUJDRSxvPUJBTkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVDVUFET1IsYz1FQz9jZXJ0
+aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2WGNGh0dHA6Ly93d3cuZWNpLmJjZS5lYy9DUkwvZWNp
+X2JjZV9lY19jcmxmaWxlY29tYi5jcmykgbUwgbIxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5D
+TyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcwNQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04g
+REUgSU5GT1JNQUNJT04tRUNJQkNFMQ4wDAYDVQQHEwVRVUlUTzElMCMGA1UEAxMcQUMgQkFOQ08g
+Q0VOVFJBTCBERUwgRUNVQURPUjEPMA0GA1UEAxMGQ1JMODc5MCsGA1UdEAQkMCKADzIwMTkxMjAy
+MTUzNjQwWoEPMjAyMTEyMDIxNjA2NDBaMB8GA1UdIwQYMBaAFEii3yMfHfgsUXqMA81JMqUJwZSr
+MB0GA1UdDgQWBBQe26DAzVfyGaYkn19LQ7UinQlzVjAJBgNVHRMEAjAAMBkGCSqGSIb2fQdBAAQM
+MAobBFY4LjEDAgSwMA0GCSqGSIb3DQEBCwUAA4ICAQBYuKAL0KhTEbrC7wrPQ0NTfbo0eXgCYYf7
+F23p+u8+CSRBZyCplYhERyPpY75xqUw1CXCRMnmDfLSxCvMu/gYCZVlM+UbMsGOoNgoMRIvucHDR
+EdvHMZ+yJ+tW2Ovyua6grykhReB3ySt5fXpPM43T19hQHVMu2H3H+0D18XM7hjQnTeXRh6rZLlBX
+9pN0X0kM802aSSrkmrZLkrXxiTnv1KfdZiU5Rv0mFuGij0k3C8fujnYkfn5GnZV/+DIV3MOSSCJz
+bASVCDMx1L+dRAHyOYMZS92KSS+2nMWYNCzxUduxHFxos3qGCy5KWDCtRPEJe46S1aOsQBCVJqwU
+W1h6Iu3qDpmgj3ljq5o7eYsarW48VSQJ4vzGmgXn6to7kH4pyLWQXsJDCA26YJGGI1iroo1jKNk9
+Bg2o1Htyfc2WpyTQpS8udTd5qbxdt7lIzKex+3nk5rWfreHSK8HxCLrkMizJZ+gEFqtcw7Uy4OrD
+lytF+xUVsEQimV3SAH+bnZ7xMRjzaDWCGDeobGDno7bfxTt4bqX4fjgS2kLusJbPueh25gXPRCsu
+nS4BtYI+M7Gk5Ftn+HM7WvcyKyzcZqihDNtz4YEnkSwQYLi+/c/gxPC8cz2HWFxDUh9jw7675jff
+qigRxCc6MGVcYBJwp103EYBVHSWzdK3t4R+z/dBWdQ==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+rfvxRsQumVdUEN/h7d7qy/qU7Fn7gLwR0HrikZprwZ7z+OfHBuw2vmW4cJorZUGconaqEBIE1EC4
+cjKu/V8ylkQicRBLka9hD4tXJfooV5PqotYUqC/hHuGnhFORkeW/JIgzVLBCA8aEW+c+ZNeM8JSY
+TN37OF8obG9wVjVe0OJxoefWPromKVRqKWq8u8DOojRm5qhHpsOwCD/nUytMclj1uiN0ft7/ZTPq
+1G7Af9zLgn0K8evtSm7NK/HWXsN0wcJ2qfYKo+LrHt1I1ney/UJO1qj3nd1SR4iqdgOTfsv4jqo+
+XYZ7icbsIG0aoIDdSD0WAVgxNGPP/EBRy8D1+w==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature898667-Object200910"><etsi:QualifyingProperties Target="#Signature898667"><etsi:SignedProperties Id="Signature898667-SignedProperties348156"><etsi:SignedSignatureProperties><etsi:SigningTime>2021-01-20T19:12:46-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>V2egg5ki8+tfuYC4HakeawfJAFk=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1533136531</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-1001446"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

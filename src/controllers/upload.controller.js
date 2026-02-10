@@ -321,8 +321,19 @@ export const procesarFactura = async (req, res) => {
     /* =====================================================
        OCR (NOTA DE VENTA / IMAGEN / PDF NO XML)
     ===================================================== */
-    const texto = await leerFactura(filePath);
-    const analisis = analizarTextoFactura(texto);
+    let texto = "";
+
+      let analisis = {
+        proveedor: {},
+        items: [],
+        total: "0.00",
+        formaPago: {}
+      };
+
+      if (!mimetype?.includes("xml")) {
+        texto = await leerFactura(filePath);
+        analisis = analizarTextoFactura(texto);
+      }
 
     if (!analisis || !analisis.proveedor) {
       throw new Error("OCR no devolvió datos válidos");
